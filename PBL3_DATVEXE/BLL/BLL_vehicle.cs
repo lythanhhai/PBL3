@@ -74,6 +74,25 @@ namespace PBL3_DATVEXE.BLL
                 }
             }
         }
+        public List<DTO_vehicle> sort(Compare cmp)
+        {
+            List<DTO_vehicle> data = BLL_vehicle.Instance.getallvehicle();
+            for (int i = 0; i < data.Count - 1; i++)
+            {
+                for (int j = i + 1; j < data.Count; j++)
+                {
+                    if (cmp(data[i], data[j]))
+                    {
+                        DTO_vehicle t = data[i];
+                        data[i] = data[j];
+                        data[j] = t;
+                    }
+                }
+            }
+            return data;
+        }
+
+        public delegate bool Compare(object s1, object s2);
 
     }
 }

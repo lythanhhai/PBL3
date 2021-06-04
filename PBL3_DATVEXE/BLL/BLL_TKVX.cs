@@ -45,9 +45,9 @@ namespace PBL3_DATVEXE.BLL
         }
 
         // thêm thông tin người dùng
-        public void addPerson_BLL(string id_person, string name, string phone, string address, string email)
+        public void addPerson_BLL(string id_person, string id_login, string name, string phone, string address, string email)
         {
-            DAL_TKVX.Instance.addPerson_DAL(id_person,name,phone,address,email);
+            DAL_TKVX.Instance.addPerson_DAL(id_person,id_login,name,phone,address,email);
         }
 
         //lấy ghế từ dal
@@ -57,10 +57,6 @@ namespace PBL3_DATVEXE.BLL
         }
 
         // thêm order
-        //public void addOrder_BLL(string id_order, string id_detRoute, string id_person, int numberTicket, double total_price, DateTime date_order)
-        //{
-        //    DAL_TKVX.Instance.addOrder_DAL(id_order, id_detRoute, id_person, numberTicket, total_price, date_order);
-        //}
         public void addOrder_BLL(string id_order, string id_person, int numberTicket, double total_price, DateTime date_order)
         {
             DAL_TKVX.Instance.addOrder_DAL(id_order, id_person, numberTicket, total_price, date_order);
@@ -109,6 +105,21 @@ namespace PBL3_DATVEXE.BLL
         public void updateOrderSeat_BLL(int id_orderSeat,string id_order)
         {
             DAL_TKVX.Instance.updateOrderSeat_DAL(id_orderSeat, id_order);
+        }
+        // lấy tất cả login 
+        public List<Login> getAllLogin_BLL()
+        {
+            return DAL_TKVX.Instance.getAllLogin();
+        }
+        // lấy id_login max
+        public string getIdLoginMax_BLL()
+        {
+            return DAL_TKVX.Instance.getId_login();
+        }
+        //thêm tài khoản
+        public void insertLogin_BLL(string id_login , string userName, string passWord)
+        {
+            DAL_TKVX.Instance.insertLogin(id_login, userName, passWord);
         }
     }
 }

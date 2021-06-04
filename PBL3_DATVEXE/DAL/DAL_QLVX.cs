@@ -135,7 +135,7 @@ namespace PBL3_DATVEXE.DAL
                         {
                             id_vehicle = r["id_vehicle"].ToString();
                             foreach (DataRow d in DB_H.Instance.get(q).Rows)
-                            {
+                            {  if(id_vehicle== d["id_vehicle"].ToString())
                                 a = d["name"].ToString();
                             }
                         }
@@ -164,8 +164,10 @@ namespace PBL3_DATVEXE.DAL
                         {
                             id_route = r["id_route"].ToString();
                             foreach (DataRow d in DB_H.Instance.get(q).Rows)
-                            {
-                                a = d["departure"].ToString() + "-" + d["arrival"].ToString();
+                            { if (id_route == d["id_route"].ToString())
+                                {
+                                    a = d["departure"].ToString() + "-" + d["arrival"].ToString();
+                                }
                             }
                         }
                     }

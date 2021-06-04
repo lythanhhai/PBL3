@@ -11,6 +11,7 @@ namespace PBL3_DATVEXE.DTO
 
 
         public string id_person { get; set; }
+        public string id_login { get; set; }
         public string name { get; set; }
 
         public string phone { get; set; }

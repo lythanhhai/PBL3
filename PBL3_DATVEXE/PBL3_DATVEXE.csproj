@@ -33,6 +33,117 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.6\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.6\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.6.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.6\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Utils.1.0.3\lib\net45\Bunifu.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="login1">
+      <HintPath>..\..\..\login1\login1\bin\Debug\login1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,15 +155,21 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="userControlSeeRoute">
+      <HintPath>..\..\..\userControlSeeRoute\userControlSeeRoute\bin\Debug\userControlSeeRoute.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLL_delRoute.cs" />
+    <Compile Include="BLL\BLL_Order.cs" />
+    <Compile Include="BLL\BLL_Person.cs" />
     <Compile Include="BLL\BLL_QLVX.cs" />
     <Compile Include="BLL\BLL_Route.cs" />
     <Compile Include="BLL\BLL_TKVX.cs" />
     <Compile Include="BLL\BLL_vehicle.cs" />
     <Compile Include="DAL\DALL_route.cs" />
     <Compile Include="DAL\DAL_DelRoute.cs" />
+    <Compile Include="DAL\DAL_Order.cs" />
     <Compile Include="DAL\DAL_QLVX.cs" />
     <Compile Include="DAL\DAL_TKVX.cs" />
     <Compile Include="DAL\DAL_vehicle.cs" />
@@ -66,15 +183,53 @@
     <Compile Include="DTO\DTO_QLVX.cs" />
     <Compile Include="DTO\DTO_route.cs" />
     <Compile Include="DTO\DTO_vehicle.cs" />
+    <Compile Include="DTO\historyBook.cs" />
+    <Compile Include="DTO\Login.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\orderSeat.cs" />
     <Compile Include="DTO\Person.cs" />
     <Compile Include="DTO\Route.cs" />
     <Compile Include="DTO\Seat.cs" />
-    <Compile Include="DTO\Time.cs" />
     <Compile Include="DTO\Vehicle.cs" />
+    <Compile Include="DTO\ViewSearchRoute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AccountInformaition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AccountInformaition.designer.cs">
+      <DependentUpon>AccountInformaition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add-detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Add-detail.Designer.cs">
+      <DependentUpon>Add-detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AffterLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AffterLogin.designer.cs">
+      <DependentUpon>AffterLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\buttonAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\buttonAccount.designer.cs">
+      <DependentUpon>buttonAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\buttonSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\buttonSearch.designer.cs">
+      <DependentUpon>buttonSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\confirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,32 +239,26 @@
     <Compile Include="View\datVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\datVe.Designer.cs">
+    <Compile Include="View\datVe.designer.cs">
       <DependentUpon>datVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail Route.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail Route.designer.cs">
+      <DependentUpon>Detail Route.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DetailSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\DetailSchedule.Designer.cs">
+    <Compile Include="View\DetailSchedule.designer.cs">
       <DependentUpon>DetailSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\historyBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="View\historyBook.designer.cs">
+      <DependentUpon>historyBook.cs</DependentUpon>
     </Compile>
     <Compile Include="View\infoTicket.cs">
       <SubType>Form</SubType>
@@ -117,30 +266,61 @@
     <Compile Include="View\infoTicket.Designer.cs">
       <DependentUpon>infoTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\mainForm.cs">
+    <Compile Include="View\main_ql.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\mainForm.Designer.cs">
-      <DependentUpon>mainForm.cs</DependentUpon>
+    <Compile Include="View\main_ql.designer.cs">
+      <DependentUpon>main_ql.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QLVX.cs">
-      <SubType>Form</SubType>
+    <Compile Include="View\Pay.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\QLVX.Designer.cs">
-      <DependentUpon>QLVX.cs</DependentUpon>
+    <Compile Include="View\Pay.designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Register.Designer.cs">
+    <Compile Include="View\Register.designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Route.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Route.designer.cs">
+      <DependentUpon>Route.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchRout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SearchRout.designer.cs">
+      <DependentUpon>SearchRout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\seeRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\seeRoute.Designer.cs">
+      <DependentUpon>seeRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\seeTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\seeTicket.Designer.cs">
+      <DependentUpon>seeTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TK_TK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TK_TK.designer.cs">
+      <DependentUpon>TK_TK.cs</DependentUpon>
     </Compile>
     <Compile Include="View\vehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\vehicle.Designer.cs">
+    <Compile Include="View\vehicle.designer.cs">
       <DependentUpon>vehicle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -149,40 +329,72 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AccountInformaition.resx">
+      <DependentUpon>AccountInformaition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Add-detail.resx">
+      <DependentUpon>Add-detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AffterLogin.resx">
+      <DependentUpon>AffterLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\buttonAccount.resx">
+      <DependentUpon>buttonAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\buttonSearch.resx">
+      <DependentUpon>buttonSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\confirm.resx">
       <DependentUpon>confirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\datVe.resx">
       <DependentUpon>datVe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail Route.resx">
+      <DependentUpon>Detail Route.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DetailSchedule.resx">
       <DependentUpon>DetailSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="View\historyBook.resx">
+      <DependentUpon>historyBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\infoTicket.resx">
       <DependentUpon>infoTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\mainForm.resx">
-      <DependentUpon>mainForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\main_ql.resx">
+      <DependentUpon>main_ql.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\QLVX.resx">
-      <DependentUpon>QLVX.cs</DependentUpon>
+    <EmbeddedResource Include="View\Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Route.resx">
+      <DependentUpon>Route.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SearchRout.resx">
+      <DependentUpon>SearchRout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\seeRoute.resx">
+      <DependentUpon>seeRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\seeTicket.resx">
+      <DependentUpon>seeTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TK_TK.resx">
+      <DependentUpon>TK_TK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\vehicle.resx">
       <DependentUpon>vehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,5 +409,48 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Image\ImageH\Chua.png" />
+    <Content Include="Image\ImageH\Confirm.png" />
+    <Content Include="Image\ImageH\confirmPass.png" />
+    <Content Include="Image\ImageH\confirmPassEvent.png" />
+    <Content Include="Image\ImageH\DatRoi.png" />
+    <Content Include="Image\ImageH\image1.png" />
+    <Content Include="Image\ImageH\password.png" />
+    <Content Include="Image\ImageH\PasswordEvent.png" />
+    <Content Include="Image\ImageH\routeBeau.png" />
+    <Content Include="Image\ImageH\siginIn.png" />
+    <Content Include="Image\ImageH\SiginIn1.png" />
+    <Content Include="Image\ImageH\SignIn2.png" />
+    <Content Include="Image\ImageH\signInHover.png" />
+    <Content Include="Image\ImageH\signUp.png" />
+    <Content Include="Image\ImageH\SignUp1.png" />
+    <Content Include="Image\ImageH\SignUp2.png" />
+    <Content Include="Image\ImageH\signUpHove.png" />
+    <Content Include="Image\ImageH\user.png" />
+    <Content Include="Image\ImageH\UserEvent.png" />
+    <Content Include="Image\ImageH\xe-khách.jpg" />
+    <Content Include="Resources\11.png" />
+    <Content Include="Resources\111.png" />
+    <Content Include="Resources\112.png" />
+    <Content Include="Resources\background2.png" />
+    <Content Include="Resources\btsearch.png" />
+    <Content Include="Resources\bus.png" />
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\check.png" />
+    <Content Include="Resources\check1.png" />
+    <Content Include="Resources\check2.png" />
+    <Content Include="Resources\clock.png" />
+    <Content Include="Resources\clock1.png" />
+    <Content Include="Resources\exchange.png" />
+    <Content Include="Resources\IconClock.png" />
+    <Content Include="Resources\placeholder %281%29.png" />
+    <Content Include="Resources\Rf6070d5e5b2ea27c6a225e2ef7468427.png" />
+    <Content Include="Resources\route.png" />
+    <Content Include="Resources\tickets.png" />
+    <Content Include="Resources\user %281%29.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\user1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

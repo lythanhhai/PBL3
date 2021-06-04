@@ -12,8 +12,9 @@ namespace PBL3_DATVEXE.DTO
         public string id_detRoute{ get; set; }
 
         public string id_vehicle { get; set; }
-        public DateTime time_start { get; set; }
+        public string time_start { get; set; }
 
+        public string type { get; set; }
         public string departure { get; set; }
 
         public string arrival { get; set; }
@@ -24,21 +25,46 @@ namespace PBL3_DATVEXE.DTO
 
         public double price { get; set; }
 
-        public static bool ComparePrice(Object o1,Object o2)
+        public static bool ComparePriceIncre(Object o1,Object o2)
         {
             return ((Detail)o1).price > ((Detail)o2).price;
         }
-
-        public static bool CompareTime(Object o1, Object o2)
+        public static bool ComparePriceDecre(Object o1, Object o2)
         {
-            if(String.Compare(Convert.ToString(((Detail)o1).time_start),Convert.ToString(((Detail)o2).time_start))>0)
+            return ((Detail)o1).price < ((Detail)o2).price;
+        }
+
+        public static bool CompareTimeIncre(Object o1, Object o2)
+        {
+            
+            DateTime date1 = Convert.ToDateTime(((Detail)o1).time_start);
+            DateTime date2 = Convert.ToDateTime(((Detail)o2).time_start);
+            //if (TimeSpan.Compare(date1.TimeOfDay, date2.TimeOfDay) > 0)
+            if (DateTime.Compare(date1, date2) > 0)
             {
                 return true;
-            }    
+            }
             else
             {
                 return false;
-            }                
+            }
+
+        }
+        public static bool CompareTimeDecre(Object o1, Object o2)
+        {
+
+            DateTime date1 = Convert.ToDateTime(((Detail)o1).time_start);
+            DateTime date2 = Convert.ToDateTime(((Detail)o2).time_start);
+            //if (TimeSpan.Compare(date1.TimeOfDay, date2.TimeOfDay) > 0)
+            if (DateTime.Compare(date1, date2) < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

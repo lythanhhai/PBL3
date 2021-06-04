@@ -70,11 +70,11 @@ namespace PBL3_DATVEXE.DAL
          public string doiRoute(string id_Route)
         {
             string route = "";
-            foreach(DTO_route i in DALL_route.Instance.getallroute())
+            foreach (DTO_route i in DALL_route.Instance.getallroute())
             {
-                if(i.id_route==id_Route)
+                if (i.id_route == id_Route)
                 {
-                    route = (i.departure.ToString() + i.arrival.ToString());
+                    route = (i.departure.ToString() + "-" + i.arrival.ToString());
                 }
             }
             return route;
@@ -83,6 +83,13 @@ namespace PBL3_DATVEXE.DAL
         public string doiVehicle(string id_Vehicle)
         {
             string vehicle = "";
+            foreach (DTO_vehicle i in DALL_vehicle.Instance.getallvehicle())
+            {
+                if (i.id_vehicle == id_Vehicle)
+                {
+                    vehicle = i.name.ToString();
+                }
+            }
             return vehicle;
         }
         public DTO_DelRoute getdelroute(DataRow dr)
@@ -92,9 +99,9 @@ namespace PBL3_DATVEXE.DAL
             {
                 id_delroute = dr["id_detroute"].ToString(),
                 route = doiRoute(dr["id_route"].ToString()),
-                vehicle = dr["id_vehicle"].ToString(),
+                vehicle = doiVehicle(dr["id_vehicle"].ToString()),
                 date = Convert.ToDateTime(dr["date"].ToString()),
-                time_start = dr["time_start"].ToString(),
+                time_start = (dr["time_start"]).ToString(),
                 price = Convert.ToDouble(dr["price"].ToString()),
                 deleted= Convert.ToBoolean(dr["deleted"].ToString())
 

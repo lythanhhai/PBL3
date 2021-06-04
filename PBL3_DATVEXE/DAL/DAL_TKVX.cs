@@ -17,7 +17,7 @@ namespace PBL3_DATVEXE.DAL
             get
             {
                 if (_Instance == null)
-                {  
+                {
                     _Instance = new DAL_TKVX();
                 }
                 return _Instance;
@@ -33,7 +33,7 @@ namespace PBL3_DATVEXE.DAL
         {
             List<Vehicle> list = new List<Vehicle>();
             //string query = "select * from Vehicle";
-            foreach(DataRow i in DBHelper.Instance.executeNonQuery("select * from Vehicle").Rows)
+            foreach (DataRow i in DBHelper.Instance.executeNonQuery("select * from Vehicle").Rows)
             {
                 list.Add(new Vehicle
                 {
@@ -43,7 +43,7 @@ namespace PBL3_DATVEXE.DAL
                     number_seat = Convert.ToInt32(i["number_seat"].ToString()),
                     status_vehicle = Convert.ToBoolean(i["status_vehicle"].ToString()),
                 });
-            }    
+            }
             return list;
         }
 
@@ -96,8 +96,8 @@ namespace PBL3_DATVEXE.DAL
                 {
                     id_seat = i["id_seat"].ToString(),
                     id_vehicle = i["id_vehicle"].ToString(),
-                     name_seat = i["name_seat"].ToString(),
-                     
+                    name_seat = i["name_seat"].ToString(),
+
                 });
             }
             return list;
@@ -126,42 +126,42 @@ namespace PBL3_DATVEXE.DAL
         // hiện detail tuyến trên form detailSchedule
         public List<Detail> getDetailSchedule_DAL(string departure1, string arrival1, DateTime date1)
         {
-            
+
             // lấy tuyến mà khách hàng chọn.
             List<Route> listRoute = new List<Route>();
-            foreach(Route i in getALLTuyen_DAL())
+            foreach (Route i in getALLTuyen_DAL())
             {
-                if(i.departure == departure1 && i.arrival == arrival1 && i.deleted != true)
+                if (i.departure == departure1 && i.arrival == arrival1 && i.deleted != true)
                 {
-                        listRoute.Add(i);                        
-                }    
+                    listRoute.Add(i);
+                }
             }
 
             // lấy cá chi tiết tuyến của listRoute sau khi có tuyến mà người dùng chọn
             List<DetailRoute> listDetailRoute = new List<DetailRoute>();
-            foreach(DetailRoute i in getALLChiTietTuyen_DAL())
+            foreach (DetailRoute i in getALLChiTietTuyen_DAL())
             {
-                foreach(Route j in listRoute)
+                foreach (Route j in listRoute)
                 {
-                    if(i.id_route == j.id_route && i.deleted != true && i.date == date1)
+                    if (i.id_route == j.id_route && i.deleted != true && i.date == date1)
                     {
                         listDetailRoute.Add(i);
-                    }    
-                }    
+                    }
+                }
             }
 
             // lấy các xe sẽ chạy chi tiết tuyến đó 
             List<Vehicle> listVehicle = new List<Vehicle>();
-            foreach(Vehicle i in getALLXe_DAL())
+            foreach (Vehicle i in getALLXe_DAL())
             {
-                foreach(DetailRoute j in listDetailRoute)
+                foreach (DetailRoute j in listDetailRoute)
                 {
-                    if(i.id_vehicle == j.id_vehicle && i.status_vehicle != true)
+                    if (i.id_vehicle == j.id_vehicle && i.status_vehicle != true)
                     {
                         listVehicle.Add(i);
-                        break;
-                    }    
-                }    
+                        //break;
+                    }
+                }
             }
 
 
@@ -183,13 +183,14 @@ namespace PBL3_DATVEXE.DAL
                                 gheTrong--;
                             }
                         }
-                        string time = Convert.ToString(listDetailRoute[i].time_start).Substring(10);
+                        string time = Convert.ToString(listDetailRoute[i].time_start).Substring(9);
                         list.Add(new Detail
                         {
                             id_detRoute = listDetailRoute[i].id_delRoute,
                             id_vehicle = listDetailRoute[i].id_vehicle,
+                            type = listVehicle[i].type.ToString(),
                             price = listDetailRoute[i].price,
-                            time_start = listDetailRoute[i].time_start,
+                            time_start = time,
                             departure = departure1,
                             arrival = arrival1,
                             empty_seat = gheTrong,
@@ -204,11 +205,8 @@ namespace PBL3_DATVEXE.DAL
                 }
             }
 
-
-
-
             return list;
-            
+
         }
 
         // lấy danh sách Detail chi tiết trên datagridview
@@ -241,6 +239,7 @@ namespace PBL3_DATVEXE.DAL
                 list.Add(new Person
                 {
                     id_person = i["id_person"].ToString(),
+                    id_login = i["id_login"].ToString(),
                     name = i["name"].ToString(),
                     phone = i["phone"].ToString(),
                     address = i["address"].ToString(),
@@ -260,7 +259,7 @@ namespace PBL3_DATVEXE.DAL
                     id_order = i["id_order"].ToString(),
                     //id_orderSeat = i["id_orderSeat"].ToString(),
 
-                  //  id_detRoute = i["id_detRoute"].ToString(), 1
+                    //  id_detRoute = i["id_detRoute"].ToString(), 1
 
                     id_person = i["id_person"].ToString(),
                     numberTicket = Convert.ToInt32(i["numberTicket"].ToString()),
@@ -271,48 +270,31 @@ namespace PBL3_DATVEXE.DAL
             return list;
         }
         // thêm khách hàng
-        public void addPerson_DAL(string id_person, string name, string phone, string address,string email)
+        public void addPerson_DAL(string id_person, string id_login, string name, string phone, string address, string email)
         {
-            string query = "insert into info_person(id_person,name,phone,address,email) values ('"
+            string query = "insert into info_person(id_person,id_login,name,phone,address,email) values (N'"
                 + id_person
-                + "','"
+                + "',N'"
+                + id_login
+                + "',N'"
                 + name
-                + "','"
+                + "',N'"
                 + phone
-                + "','"
-                + address 
-                + "','" +
+                + "',N'"
+                + address
+                + "',N'" +
                 email
                 + "')";
             DBHelper.Instance.executeQuery(query);
         }
         // thêm order
-        //public void addOrder_DAL(string id_order, string id_detRoute, string id_person, int numberTicket, double total_price, DateTime date_order)//2
-        //{
-        //    string query = "INSERT INTO [Order](id_order,id_detRoute,id_person,numberTicket,total_price,date_order) values "
-        //        + "('"
-        //        + id_order
-        //        + "','"
-        //        + id_detRoute
-        //        + "','"
-        //        + id_person
-        //        + "','"
-        //        + Convert.ToString(numberTicket)
-        //        + "','"
-        //        + Convert.ToString(total_price)
-        //        + "','"
-        //        + Convert.ToString(date_order)
-        //        + "')";
-
-        //    DBHelper.Instance.executeQuery(query);
-        //}
 
         public void addOrder_DAL(string id_order, string id_person, int numberTicket, double total_price, DateTime date_order)//2
         {
             string query = "INSERT INTO [Order](id_order,id_person,numberTicket,total_price,date_order) values "
-                + "('"
+                + "(N'"
                 + id_order
-                + "','"
+                + "',N'"
                 + id_person
                 + "','"
                 + Convert.ToString(numberTicket)
@@ -340,24 +322,24 @@ namespace PBL3_DATVEXE.DAL
         public List<Seat> getGheByXe_DAL(string id_vehicle)
         {
             List<Seat> list = new List<Seat>();
-            foreach(Vehicle i in getALLXe_DAL())
+            foreach (Vehicle i in getALLXe_DAL())
             {
-                if(i.id_vehicle == id_vehicle)
+                if (i.id_vehicle == id_vehicle)
                 {
                     foreach (Seat j in getALLGhe_DAL())
                     {
-                         if(i.id_vehicle == j.id_vehicle)
+                        if (i.id_vehicle == j.id_vehicle)
                         {
                             list.Add(j);
-                        }    
+                        }
                     }
                 }
                 else
                 {
                     continue;
-                }                    
+                }
 
-            }    
+            }
             return list;
         }
 
@@ -365,15 +347,15 @@ namespace PBL3_DATVEXE.DAL
         public string getMaxIdOrder()
         {
             string idOrder = "";
-            string Max = "";
-            foreach(Order i in getALlOrder_DAL())
+            int Max = 0;
+            foreach (Order i in getALlOrder_DAL())
             {
-                if(String.Compare(i.id_order,Max) > 0)
+                if (Convert.ToInt32(i.id_order) > Max)
                 {
-                    Max = i.id_order;
-                }    
+                    Max = Convert.ToInt32(i.id_order);
+                }
             }
-            idOrder = Max;
+            idOrder = Convert.ToString(Max);
             return idOrder;
         }
 
@@ -381,23 +363,126 @@ namespace PBL3_DATVEXE.DAL
         public string getMaxIdPerson()
         {
             string idPerson = "";
-            string Max = "";
+            int Max = 0;
             foreach (Person i in getALlKhachHang_DAL())
             {
-                if (String.Compare(i.id_person, Max) > 0)
+                if (Convert.ToInt32(i.id_person) > Max)
                 {
-                    Max = i.id_person;
+                    Max = Convert.ToInt32(i.id_person);
                 }
             }
-            idPerson = Max;
+            idPerson = Convert.ToString(Max);
             return idPerson;
         }
 
         // update orderSeat sau khi order
-        public void updateOrderSeat_DAL(int id_orderSeat,string id_order)
+        public void updateOrderSeat_DAL(int id_orderSeat, string id_order)
         {
             string query = "Update orderSeat set status = 1,id_order = " + "'" + id_order + "'" + " where id_orderSeat = " + id_orderSeat.ToString();
             DBHelper.Instance.executeQuery(query);
+        }
+
+        // lấy tất cả login 
+        public List<Login> getAllLogin()
+        {
+            List<Login> list = new List<Login>();
+            foreach (DataRow i in DBHelper.Instance.executeNonQuery("select * from Login").Rows)
+            {
+                list.Add(new Login
+                {
+                    id_login = i["id_login"].ToString(),
+                    userName = i["userName"].ToString(),
+                    passWord = i["passWord"].ToString(),
+                    row = Convert.ToInt32(i["row"].ToString()),
+                });
+            }
+            return list;
+        }
+
+        // lấy id_login max
+        public string getId_login()
+        {
+            string id_login = "";
+            int Max = 0;
+            List<Login> list = getAllLogin();
+            foreach (Login i in list)
+            {
+                if (Convert.ToInt32(i.id_login) > Max)
+                {
+                    Max = Convert.ToInt32(i.id_login);
+                }
+            }
+            id_login = Convert.ToString(Max);
+            return id_login;
+        }
+        // thêm login khi đăng ký
+        public void insertLogin(string id_login, string username, string passWord)
+        {
+            string query = "Insert into Login values('"
+                + id_login
+                + "','"
+                + username
+                + "','"
+                + passWord
+                + "',"
+                + "1)";
+
+            DBHelper.Instance.executeQuery(query);
+        }
+        public List<historyBook> getHistoryBook()
+        {
+            List<historyBook> list = new List<historyBook>();
+
+            foreach (Person i in getALlKhachHang_DAL())
+            {
+                if (Properties.Settings.Default.id_login == i.id_login)
+                {
+                    foreach (Order j in getALlOrder_DAL())
+                    {
+                        if (i.id_person == j.id_person)
+                        {
+                            foreach (orderSeat k in getAllOrderSeat_DAL())
+                            {
+                                if (j.id_order == k.id_order)
+                                {
+                                    foreach (DetailRoute l in getALLChiTietTuyen_DAL())
+                                    {
+                                        if (k.id_detRoute == l.id_delRoute)
+                                        {
+                                            foreach (Route m in getALLTuyen_DAL())
+                                            {
+                                                if (m.id_route == l.id_route)
+                                                {
+                                                    list.Add(new historyBook
+                                                    {
+                                                        numberTicket = j.numberTicket,
+                                                        date_order = j.date_order,
+                                                        total_price = j.total_price,
+                                                        departure = m.departure,
+                                                        arrival = m.arrival,
+                                                        date = l.date,
+                                                    }
+                                                    );
+                                                    break;
+                                                }
+                                            }
+                                            break;
+                                        }
+
+                                    }
+                                    break;
+                                }
+
+                            }
+                            break;
+                        }
+
+
+                    }
+                }
+
+            }
+            return list;
         }
     }
 }

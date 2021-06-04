@@ -74,6 +74,25 @@ namespace PBL3_DATVEXE.BLL
                 }
             }
         }
+        public List<DTO_route> sort(Compare cmp)
+        {
+            List<DTO_route> data = BLL_Route.Instance.getallRoute();
+            for (int i = 0; i < data.Count - 1; i++)
+            {
+                for (int j = i + 1; j < data.Count; j++)
+                {
+                    if (cmp(data[i], data[j]))
+                    {
+                        DTO_route t = data[i];
+                        data[i] = data[j];
+                        data[j] = t;
+                    }
+                }
+            }
+            return data;
+        }
+
+        public delegate bool Compare(object s1, object s2);
 
     }
 }

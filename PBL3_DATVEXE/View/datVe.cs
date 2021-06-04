@@ -41,6 +41,9 @@ namespace PBL3_DATVEXE.View
             // giá và số vé
             this.soVe = soVe;
             this.tongGia = tongGia;
+            lbTen.ForeColor = Color.FromArgb(78, 184, 206);
+            bunifuPanel1.BackgroundColor = Color.FromArgb(78, 184, 206);
+            txtName.ForeColor = Color.FromArgb(78, 184, 206);
         }
 
         private void But_xacnhan_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace PBL3_DATVEXE.View
 
             // thêm thông tin người dùng
             string id_person = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdPerson_BLL()) + 1);
-            BLL_TKVX.Instance.addPerson_BLL(id_person, txtName.Text, txtPhone.Text, txtNote.Text, txtEmail.Text);
+            BLL_TKVX.Instance.addPerson_BLL(id_person,Properties.Settings.Default.id_login, txtName.Text, txtPhone.Text, txtNote.Text, txtEmail.Text);
 
             // id_order
             string id_order = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdOrder_BLL()) + 1);
@@ -105,5 +108,129 @@ namespace PBL3_DATVEXE.View
                 MessageBox.Show("Ban chua chon ghe");
             }
         }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+        //    txtName.Clear();
+            lbTen.ForeColor = Color.FromArgb(78, 184, 206);
+            bunifuPanel1.BackgroundColor = Color.FromArgb(78, 184, 206);
+            txtName.ForeColor = Color.FromArgb(78, 184, 206);
+
+            lbSoDT.ForeColor = Color.White;
+            bunifuPanel2.BackgroundColor = Color.White;
+            txtPhone.ForeColor = Color.White;
+
+            lbEmail.ForeColor = Color.White;
+            bunifuPanel3.BackgroundColor = Color.White;
+            txtEmail.ForeColor = Color.White;
+
+            lbNote.ForeColor = Color.White;
+            bunifuPanel4.BackgroundColor = Color.White;
+            txtNote.ForeColor = Color.White;
+        }
+
+        private void txtPhone_Click(object sender, EventArgs e)
+        {
+          //  txtPhone.Clear();
+            lbSoDT.ForeColor = Color.FromArgb(78, 184, 206);
+            bunifuPanel2.BackgroundColor = Color.FromArgb(78, 184, 206);
+            txtPhone.ForeColor = Color.FromArgb(78, 184, 206);
+
+            lbTen.ForeColor = Color.White;
+            bunifuPanel1.BackgroundColor = Color.White;
+            txtName.ForeColor = Color.White;
+
+            lbEmail.ForeColor = Color.White;
+            bunifuPanel3.BackgroundColor = Color.White;
+            txtEmail.ForeColor = Color.White;
+
+            lbNote.ForeColor = Color.White;
+            bunifuPanel4.BackgroundColor = Color.White;
+            txtNote.ForeColor = Color.White;
+        }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+           // txtEmail.Clear();
+            lbEmail.ForeColor = Color.FromArgb(78, 184, 206);
+            bunifuPanel3.BackgroundColor = Color.FromArgb(78, 184, 206);
+            txtEmail.ForeColor = Color.FromArgb(78, 184, 206);
+
+            lbSoDT.ForeColor = Color.White;
+            bunifuPanel2.BackgroundColor = Color.White;
+            txtPhone.ForeColor = Color.White;
+
+            lbTen.ForeColor = Color.White;
+            bunifuPanel1.BackgroundColor = Color.White;
+            txtName.ForeColor = Color.White;
+
+            lbNote.ForeColor = Color.White;
+            bunifuPanel4.BackgroundColor = Color.White;
+            txtNote.ForeColor = Color.White;
+        }
+
+        private void txtNote_Click(object sender, EventArgs e)
+        {
+         //   txtNote.Clear();
+            lbNote.ForeColor = Color.FromArgb(78, 184, 206);
+            bunifuPanel4.BackgroundColor = Color.FromArgb(78, 184, 206);
+            txtNote.ForeColor = Color.FromArgb(78, 184, 206);
+            
+
+            lbSoDT.ForeColor = Color.White;
+            bunifuPanel2.BackgroundColor = Color.White;
+            txtPhone.ForeColor = Color.White;
+
+            lbEmail.ForeColor = Color.White;
+            bunifuPanel3.BackgroundColor = Color.White;
+            txtEmail.ForeColor = Color.White;
+
+            lbTen.ForeColor = Color.White;
+            bunifuPanel1.BackgroundColor = Color.White;
+            txtName.ForeColor = Color.White;
+        }
+
+        private void But_xemthongtin_Click(object sender, EventArgs e)
+        {
+            // showNameSeat();
+            panelMain.Hide();
+            OpenChildForm(new infoTicket(this.id_detRoute,this.id_vehicle,this.tongGia));
+        }
+        private Form currentChildForm;
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            //panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            panelMain.Text = childForm.Text;
+        }
+        //public void showNameSeat()
+        //{
+        //    List<string> listName = getGhe();
+        //    //List<seeTicket> list = new List<seeTicket>();
+        //    seeTicket[] list = new seeTicket[listName.Count];
+        //    int count1 = 0;
+        //    foreach(seeTicket i in list)
+        //    {
+
+        //        flowLayoutPanel1.Controls.Add(new seeTicket
+        //        {
+        //             NameGhe = listName[count1],
+        //             Gia = (this.tongGia / this.soVe).ToString(),
+        //        });
+        //        count1++;
+        //    }    
+        //}
     }
 }

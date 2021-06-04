@@ -74,28 +74,30 @@ namespace PBL3_DATVEXE.BLL
             }
             return data;
             }
-        public List<DTO_DelRoute> getListdelroute_BLL(string  id_route)
+        public List<DTO_DelRoute> getListdelroute_BLL(string  id_route, string name)
         {
 
             List<DTO_DelRoute> data = new List<DTO_DelRoute>();
             foreach (DTO_delRoute_xl i in DAL_DelRoute.Instance.getalldelroute_xl())
             {
-                if (i.id_route == id_route )
-                {
-                    data.Add(new DTO_DelRoute
+                
+                    if (i.id_route == id_route && doivehicle(i.id_vehicle).Contains(name))
                     {
-                        id_delroute = i.id_delroute,
-                        route = doiRoute(i.id_route),
-                        vehicle = doivehicle(i.id_vehicle),
-                        date = i.date,
-                        price=i.price,
-                        time_start = i.time_start.ToLongTimeString(),
-                        deleted =i.deleted
+                        data.Add(new DTO_DelRoute
+                        {
+                            id_delroute = i.id_delroute,
+                            route = doiRoute(i.id_route),
+                            vehicle = doivehicle(i.id_vehicle),
+                            date = i.date,
+                            price = i.price,
+                            time_start = i.time_start.ToLongTimeString(),
+                            deleted = i.deleted
 
-                    });
-                    
-                }
-                if (id_route == "0" )
+                        });
+
+                    }
+                
+                if (id_route == "0" && name=="")
                 {
                     data.Add(new DTO_DelRoute
                     {
@@ -110,6 +112,26 @@ namespace PBL3_DATVEXE.BLL
                     }) ;
 
                 }
+                if (id_route == "0" && name != "")
+                {
+                    if ( doivehicle(i.id_vehicle).Contains(name))
+                    {
+                        data.Add(new DTO_DelRoute
+                        {
+                            id_delroute = i.id_delroute,
+                            route = doiRoute(i.id_route),
+                            vehicle = doivehicle(i.id_vehicle),
+                            date = i.date,
+                            price = i.price,
+                            time_start = i.time_start.ToLongTimeString(),
+                            deleted = i.deleted
+
+                        });
+
+                    }
+                }    
+
+
             }
             return data;
         }
@@ -172,6 +194,25 @@ namespace PBL3_DATVEXE.BLL
             }
         }
 
-       
+        public List<DTO_DelRoute> sort(Compare cmp, string id_route, string name)
+        {
+            List<DTO_DelRoute> data = BLL_delRoute.Instance.getListdelroute_BLL(id_route, name);
+            for (int i = 0; i < data.Count - 1; i++)
+            {
+                for (int j = i + 1; j < data.Count; j++)
+                {
+                    if (cmp(data[i], data[j]))
+                    {
+                        DTO_DelRoute t = data[i];
+                        data[i] = data[j];
+                        data[j] = t;
+                    }
+                }
+            }
+            return data;
+        }
+
+        public delegate bool Compare(object s1, object s2);
+
     }
 }
