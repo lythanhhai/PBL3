@@ -149,5 +149,21 @@ namespace PBL3_DATVEXE.BLL
         {
             DAL_TKVX.Instance.insertLogin(id_login, userName, passWord);
         }
+        public List<Information_Order> showinformation_order(string id_order)
+        {
+            return DAL_TKVX.Instance.getall_Order(id_order);
+        }
+        public List<Information_Order> showinformation_order()
+        {
+            return DAL_TKVX.Instance.getall_Order();
+        }
+        public List<Information_Order> showinformation_ordersearch(string id_order)
+        {
+            return DAL_TKVX.Instance.getall_Ordersearch(id_order);
+        }
+        public  List<Information_Order> Search_information_Day(string day1,string day2)
+        {
+            return DAL_TKVX.Instance.getall_Ordersearch_Day(day1,day2);
+        }
     }
 }

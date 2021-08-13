@@ -101,5 +101,17 @@ namespace PBL3_DATVEXE.View
             historyBook hb = new historyBook();
             hb.Show();
         }
+
+        private void searchRout1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void but_dangxuat_Click(object sender, EventArgs e)
+        {
+            Register rg = new Register();
+            this.Hide();
+            rg.Show();
+        }
     }
 }

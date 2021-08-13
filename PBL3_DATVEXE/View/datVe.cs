@@ -27,7 +27,7 @@ namespace PBL3_DATVEXE.View
 
         // lấy tên ghế từ form confirm sang form datVe.
         public delegate List<string> getNameGhe();
-
+        private string idoder { get; set; }
         public getNameGhe getGhe { get; set; }
         public int soVe { get; set; }
         public double tongGia { get; set; }
@@ -49,13 +49,9 @@ namespace PBL3_DATVEXE.View
         private void But_xacnhan_Click(object sender, EventArgs e)
         {
 
-            // thêm thông tin người dùng
-            string id_person = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdPerson_BLL()) + 1);
-            BLL_TKVX.Instance.addPerson_BLL(id_person,Properties.Settings.Default.id_login, txtName.Text, txtPhone.Text, txtNote.Text, txtEmail.Text);
-
             // id_order
             string id_order = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdOrder_BLL()) + 1);
-
+            this.idoder = id_order;
             // lấy số vé and tổng giá cho thuộc tính 
             this.id_detRoute = getRoute();// id tuyến
             this.id_vehicle = getVehicle();// id xe
@@ -95,22 +91,23 @@ namespace PBL3_DATVEXE.View
             // thêm đơn order theo ghế đã chọn
             if (listOrderSeat.Count > 0)
             {
+                // thêm thông tin người dùng
+                string id_person = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdPerson_BLL()) + 1);
+                BLL_TKVX.Instance.addPerson_BLL(id_person, Properties.Settings.Default.id_login, txtName.Text, txtPhone.Text, txtNote.Text, txtEmail.Text);
                 //BLL_TKVX.Instance.addOrder_BLL(id_order, this.id_detRoute, id_person, this.soVe, this.tongGia, DateTime.Now);
                 BLL_TKVX.Instance.addOrder_BLL(id_order, id_person, this.soVe, this.tongGia, DateTime.Now);
                 for (int i = 0; i < listOrderSeat.Count; i++)
                 {
                     BLL_TKVX.Instance.updateOrderSeat_BLL(listOrderSeat[i], id_order);
                 }
-                Payment payment = new Payment(Properties.Settings.Default.id_login, id_person, id_order);
-                payment.Show();
+                FormChonPTTT PTTT = new FormChonPTTT(Properties.Settings.Default.id_login, id_person, id_order);
+                PTTT.Show();
             }
             else
             {
                 MessageBox.Show("loi");
             }
-            MessageBox.Show(listGheDaChon.Count.ToString());
-            MessageBox.Show(listId_seat.Count.ToString());
-            MessageBox.Show(listOrderSeat.Count.ToString());
+
         }
 
         private void txtName_Click(object sender, EventArgs e)

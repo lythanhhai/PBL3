@@ -186,7 +186,7 @@ namespace PBL3_DATVEXE.View
                     break;
                 }
             }
-            if (count > 0&& row==1)
+            if (count > 0 && row == 1)
             {
 
                 //ds.Show();
@@ -194,15 +194,15 @@ namespace PBL3_DATVEXE.View
                 Properties.Settings.Default.id_login = id_login;
                 Properties.Settings.Default.Save();
                 Properties.Settings.Default.Reload();
-                //this.Close();
-                //this.Hide();
+                this.Hide();
             }
 
             if(count > 0 && row == 0)
             {
                 main_ql f = new main_ql();
                 f.Show();
-                
+                this.Hide();
+
             }
             if(count==0)
             {
@@ -223,25 +223,25 @@ namespace PBL3_DATVEXE.View
 
         private void bpbSignUp_Click(object sender, EventArgs e)
         {
-            if (txtUser1.Text.Length >= 5)
-            {
-                lbErrorUserSignUp.Text = "";
-            }
-            // kiểm tra lượng ký tự password
-            if (txtPass1.Text.Length >= 8)
-            {
-                lbErrorPassSignUp.Text = "";
-            }
-            // kiểm tra 2 mật khâu trùng nhau không
-            if (String.Compare(txtPass1.Text, txtConPass.Text) == 0)
-            {
-                lbErrorConPassSignUp.Text = "";
-            }
-            // kiểm tra tích vào 
-            if (cbAgree.Checked == true)
-            {
-                lbErrorDontTick.Text = "";
-            }
+            //if (txtUser1.Text.Length >= 5)
+            //{
+            //    lbErrorUserSignUp.Text = "";
+            //}
+            //// kiểm tra lượng ký tự password
+            //if (txtPass1.Text.Length >= 8)
+            //{
+            //    lbErrorPassSignUp.Text = "";
+            //}
+            //// kiểm tra 2 mật khâu trùng nhau không
+            //if (String.Compare(txtPass1.Text, txtConPass.Text) == 0)
+            //{
+            //    lbErrorConPassSignUp.Text = "";
+            //}
+            //// kiểm tra tích vào 
+            //if (cbAgree.Checked == true)
+            //{
+            //    lbErrorDontTick.Text = "";
+            //}
             List<Login> list = BLL_TKVX.Instance.getAllLogin_BLL();
             int count = 0;
             foreach (Login i in list)

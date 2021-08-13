@@ -34,11 +34,11 @@ namespace PBL3_DATVEXE.View
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_STK = new System.Windows.Forms.Label();
             this.lbid_order = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbUpND = new System.Windows.Forms.Label();
             this.labelcountdown = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -65,11 +65,11 @@ namespace PBL3_DATVEXE.View
             this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label6.Name = "label6";
             // 
-            // label5
+            // lb_STK
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.lb_STK, "lb_STK");
+            this.lb_STK.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lb_STK.Name = "lb_STK";
             // 
             // lbid_order
             // 
@@ -89,11 +89,11 @@ namespace PBL3_DATVEXE.View
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Name = "label4";
             // 
-            // label1
+            // lbUpND
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lbUpND, "lbUpND");
+            this.lbUpND.BackColor = System.Drawing.Color.Transparent;
+            this.lbUpND.Name = "lbUpND";
             // 
             // labelcountdown
             // 
@@ -109,6 +109,7 @@ namespace PBL3_DATVEXE.View
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -130,11 +131,11 @@ namespace PBL3_DATVEXE.View
             this.Controls.Add(this.labelcountdown);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lb_STK);
             this.Controls.Add(this.lbid_order);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbUpND);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Payment";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -148,11 +149,11 @@ namespace PBL3_DATVEXE.View
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_STK;
         private System.Windows.Forms.Label lbid_order;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbUpND;
         private System.Windows.Forms.Label labelcountdown;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer2;

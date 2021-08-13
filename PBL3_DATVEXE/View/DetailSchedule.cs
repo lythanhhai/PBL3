@@ -27,22 +27,11 @@ namespace PBL3_DATVEXE.View
             this.arrival = arrival;
             this.date = date;
 
-            showDetailRoute(this.departure, this.arrival, this.date);//"Quảng Trị","Đà Nẵng", DateTime.Now
-            //showDetailRoute("Hà Tĩnh", "Đà Nẵng", this.date);
+            showDetailRoute(this.departure, this.arrival, this.date);
             if (flowLayoutPanel1 == null)
             {
                 MessageBox.Show("Khong co tuyen di nao ban can tim");
             }
-            //List<DetailRoute> list = BLL_TKVX.Instance.getAllChiTietTuyen_BLL();
-            //foreach (DetailRoute i in list)
-            //{
-
-            //    //if ((DateTime.Compare(DateTime.Now.Date, i.date) > 0))
-            //    if ((DateTime.Compare(DateTime.Now.Date, i.date) > 0))// || (DateTime.Compare(Convert.ToDateTime(DateTime.Now.Hour),Convert.ToDateTime(i.time_start)) > 0))
-            //    {
-            //        BLL_TKVX.Instance.updateDetailRoute_BLL(i.id_delRoute);
-            //    }
-            //}
         }
 
 
@@ -120,17 +109,11 @@ namespace PBL3_DATVEXE.View
 
         private void DetailSchedule_Load(object sender, EventArgs e)
         {
-
-            //List<DetailRoute> list = BLL_TKVX.Instance.getAllChiTietTuyen_BLL();
-            //foreach (DetailRoute i in list)
+            //List<Detail> listDetail = BLL_TKVX.Instance.getALLDetailSchedule_BLL(departure, arrival, date.Date);
+            //foreach(Detail i in listDetail)
             //{
-
-            //    //if ((DateTime.Compare(DateTime.Now.Date, i.date) > 0))
-            //    if ((DateTime.Compare(DateTime.Now.Date, i.date) > 0))// || (DateTime.Compare(Convert.ToDateTime(DateTime.Now.Hour),Convert.ToDateTime(i.time_start)) > 0))
-            //    {
-            //        BLL_TKVX.Instance.updateDetailRoute_BLL(i.id_delRoute);
-            //    }
-            //}
+            //    MessageBox.Show(i.type.ToString());
+            //}    
         }
 
         public void showDetailRoute(string departure, string arrival, DateTime date)
@@ -154,6 +137,7 @@ namespace PBL3_DATVEXE.View
                     gia = listDetail[count1].price.ToString() + "đ",
                     gheTrong = listDetail[count1].empty_seat.ToString() + " ghế" + " trống"
                 });
+                
                 count1++;
             }
         }
@@ -299,6 +283,13 @@ namespace PBL3_DATVEXE.View
                 showDatailRoute1(BLL_TKVX.Instance.Sort_BLL(new DAL_TKVX.myDel(Detail.ComparePriceDecre), this.departure, this.arrival, this.date), this.departure, this.arrival, this.date);
                 // pnGiaCaoNhat.BorderStyle = BorderStyle.FixedSingle;
             }
+        }
+
+        private void but_trove_Click(object sender, EventArgs e)
+        {
+            AffterLogin al = new AffterLogin();
+            al.Show();
+            this.Hide();
         }
     }
 }

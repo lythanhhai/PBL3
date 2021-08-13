@@ -253,6 +253,16 @@ namespace PBL3_DATVEXE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_dep_mau_trang_104324637 {
+            get {
+                object obj = ResourceManager.GetObject("hinh_nen_dep_mau_trang_104324637", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconClock {
             get {
                 object obj = ResourceManager.GetObject("IconClock", resourceCulture);
@@ -266,6 +276,27 @@ namespace PBL3_DATVEXE.Properties {
         internal static System.Drawing.Bitmap image1 {
             get {
                 object obj = ResourceManager.GetObject("image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MOMO {
+            get {
+                object obj = ResourceManager.GetObject("MOMO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Online_mobile_banking_and_internet_banking_isometric_design_concept_on_transparent_background_PNG {
+            get {
+                object obj = ResourceManager.GetObject("Online_mobile_banking_and_internet_banking_isometric_design_concept_on_transparen" +
+                        "t_background_PNG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

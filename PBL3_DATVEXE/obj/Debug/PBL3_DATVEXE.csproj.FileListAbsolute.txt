@@ -515,3 +515,4 @@ D:\Documents\PBL3\PBL3_DATVEXE\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xm
 D:\Documents\PBL3\PBL3_DATVEXE\bin\Debug\login1.pdb
 D:\Documents\PBL3\PBL3_DATVEXE\bin\Debug\userControlSeeRoute.pdb
 D:\Documents\PBL3\PBL3_DATVEXE\obj\Debug\PBL3_DATVEXE.csproj.CopyComplete
+D:\Documents\PBL3\PBL3_DATVEXE\obj\Debug\PBL3_DATVEXE.View.FormChonPTTT.resources

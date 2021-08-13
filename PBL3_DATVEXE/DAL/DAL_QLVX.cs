@@ -31,7 +31,13 @@ namespace PBL3_DATVEXE.DAL
         }
         DataTable datadung = DB_H.Instance.get(" select * from orderSeat");
         DataTable datadung1 = DB_H.Instance.get(" select * from DetailRoute");
-      
+        DataTable datadung3 = DB_H.Instance.get(" select * from info_person");
+        DataTable datadung4 = DB_H.Instance.get(" select * from Seat");
+        DataTable datadung5 = DB_H.Instance.get(" select * from Vehicle");
+        DataTable datadung6 = DB_H.Instance.get(" select * from Route");
+
+
+
 
 
         public string doi_date(string id_order)
@@ -57,11 +63,34 @@ namespace PBL3_DATVEXE.DAL
             }
             return a;
         }
+        public DateTime doi_date1(string id_order)
+        {
+            DateTime a= DateTime.MinValue;
+            string id_det = "";
+            //string query = "select * from orderSeat";
+            //string query1 = "select * from DetailRoute";
+            foreach (DataRow i in datadung.Rows)
+            {
+                if (i["id_order"].ToString() == id_order)
+                {
+                    id_det = i["id_detRoute"].ToString();
+                    foreach (DataRow r in datadung1.Rows)
+                    {
+                        if (id_det == r["id_detRoute"].ToString())
+                        {
+                            a = Convert.ToDateTime(r["date"].ToString());
+                        }
+                    }
+                }
+
+            }
+            return a;
+        }
         public string doipersonvip(string id_person, int i)
         {
             string a = "";
-            string query = "select * from info_person";
-            foreach (DataRow r in DB_H.Instance.get(query).Rows)
+           
+            foreach (DataRow r in datadung3.Rows)
             {
                 if (r["id_person"].ToString() == id_person)
                 {
@@ -100,13 +129,13 @@ namespace PBL3_DATVEXE.DAL
             string a = "";
             string id_seat = "";
            // string query = "select * from orderSeat";
-            string query1 = "select * from Seat";
+           // string query1 = "select * from Seat";
             foreach (DataRow i in datadung.Rows)
             {
                 if (i["id_order"].ToString() == id_order)
                 {
                     id_seat = i["id_seat"].ToString();
-                    foreach (DataRow r in DB_H.Instance.get(query1).Rows)
+                    foreach (DataRow r in datadung4.Rows)
                     {
                         if (id_seat == r["id_seat"].ToString())
                         {
@@ -128,7 +157,7 @@ namespace PBL3_DATVEXE.DAL
             string id_vehicle = "";
             //string query = "select * from orderSeat";
            // string query1 = "select * from DetailRoute";
-            string q = "select * from Vehicle";
+           // string q = "select * from Vehicle";
             foreach (DataRow i in datadung.Rows)
             {
                 if (i["id_order"].ToString() == id_order)
@@ -139,7 +168,7 @@ namespace PBL3_DATVEXE.DAL
                         if (id_det == r["id_detRoute"].ToString())
                         {
                             id_vehicle = r["id_vehicle"].ToString();
-                            foreach (DataRow d in DB_H.Instance.get(q).Rows)
+                            foreach (DataRow d in datadung5.Rows)
                             {  if(id_vehicle== d["id_vehicle"].ToString())
                                 a = d["name"].ToString();
                             }
@@ -157,7 +186,7 @@ namespace PBL3_DATVEXE.DAL
             string id_route = "";
             //string query = "select * from orderSeat";
            // string query1 = "select * from DetailRoute";
-            string q = "select * from Route";
+            //string q = "select * from Route";
             foreach (DataRow i in datadung.Rows)
             {
                 if (i["id_order"].ToString() == id_order)
@@ -168,7 +197,7 @@ namespace PBL3_DATVEXE.DAL
                         if (id_det == r["id_detRoute"].ToString())
                         {
                             id_route = r["id_route"].ToString();
-                            foreach (DataRow d in DB_H.Instance.get(q).Rows)
+                            foreach (DataRow d in datadung6.Rows)
                             { if (id_route == d["id_route"].ToString())
                                 {
                                     a = d["departure"].ToString() + "-" + d["arrival"].ToString();
@@ -192,7 +221,18 @@ namespace PBL3_DATVEXE.DAL
             }
             return data;
         }
+        public List<DateTime> gettime()
 
+        {
+            List<DateTime> time = new List<DateTime>();
+           
+            foreach(DTO_DelRoute i in DAL_DelRoute.Instance.getalldelroute())
+            {
+                
+                time.Add(i.date);
+            }
+            return time;
+        }
         public DTO_QLVX1 getQLVX(DataRow dr)
         {
 
@@ -200,7 +240,7 @@ namespace PBL3_DATVEXE.DAL
             return new DTO_QLVX1
             {
                 id_order = dr["id_order"].ToString(),
-             //   date_order = Convert.ToDateTime(dr["date_order"].ToString()),
+              date_order = doi_date1(dr["id_order"].ToString()),
                 date_route = doi_date(dr["id_order"].ToString()),
                 name_person = doipersonvip(dr["id_person"].ToString(), 1),
                 phone = doipersonvip(dr["id_person"].ToString(), 2),

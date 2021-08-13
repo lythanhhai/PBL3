@@ -28,14 +28,16 @@ namespace PBL3_DATVEXE
         {
             List<DTO_route> list = BLL_Route.Instance.getallRoute();
             foreach (var i in list)
-            {
-                bunifuDropdown1.Items.Add(new CBBitem
+            { if (i.deleted == false)
                 {
-                    Value = i.id_route,
-                    Text = i.departure + "-" + i.arrival
+                    bunifuDropdown1.Items.Add(new CBBitem
+                    {
+                        Value = i.id_route,
+                        Text = i.departure + "-" + i.arrival
 
 
-                });
+                    });
+                }
 
             }
             List<DTO_vehicle> list1 = BLL_vehicle.Instance.getallvehicle();
@@ -58,8 +60,8 @@ namespace PBL3_DATVEXE
                 bunifuTextBox2.Text = dd.time_start.ToLongTimeString();
                 bunifuTextBox3.Text = dd.price.ToString();
                 bunifuDatePicker1.Value = dd.date;
-                bunifuDropdown1.SelectedIndex = Convert.ToInt32(dd.id_route) - 1;
-                bunifuDropdown2.SelectedIndex = Convert.ToInt32(dd.id_vehicle) - 1;
+                bunifuDropdown1.SelectedIndex = BLL_delRoute.Instance.getRoute(dd.id_delroute)-1;
+                bunifuDropdown2.SelectedIndex = BLL_delRoute.Instance.getVehicle(dd.id_delroute) - 1;
                 if (bunifuTextBox1.Text != "")
                 {
                     bunifuTextBox1.ReadOnly = true;
@@ -79,7 +81,7 @@ namespace PBL3_DATVEXE
             int i = 0;
             DTO_delRoute_xl s = new DTO_delRoute_xl();
             s.id_delroute = bunifuTextBox1.Text;
-            if (bunifuDropdown1.Text == "Route" && bunifuDropdown2.Text == "Vehicle")
+            if (bunifuDropdown1.Text == "Route" || bunifuDropdown2.Text == "Vehicle")
             {
                 MessageBox.Show("bạn chua chon truong thich hop");
                 i++;
@@ -107,8 +109,8 @@ namespace PBL3_DATVEXE
             {
                 MessageBox.Show("gia tri không hop le");
                 i++;
-            } 
-              s.date = bunifuDatePicker1.Value;
+            }
+            s.date = bunifuDatePicker1.Value;
             if (i == 0)
             {
                 BLL_delRoute.Instance.execute(s);

@@ -441,6 +441,105 @@ namespace PBL3_DATVEXE.DAL
 
             DBHelper.Instance.executeQuery(query);
         }
+        public List<Information_Order> getall_Order(string id_order)
+        {
+            string sql = "select [MVH_07].[dbo].[Order].id_order,Vehicle.name ,departure,arrival,DetailRoute.date,DetailRoute.time_start,numberTicket,total_price,date_order,info_person.name as name1,info_person.phone from Vehicle, DetailRoute, Route, orderSeat, Seat, info_person,[MVH_07].[dbo].[Order],[MVH_07].[dbo].[login] where Route.id_route = DetailRoute.id_route and Vehicle.id_vehicle = DetailRoute.id_vehicle and Vehicle.id_vehicle = Seat.id_vehicle and DetailRoute.id_detRoute = orderSeat.id_detRoute and Seat.id_seat = orderSeat.id_seat and orderSeat.id_order = [MVH_07].[dbo].[Order].id_order and [MVH_07].[dbo].[Order].id_person = info_person.id_person and info_person.id_login =[MVH_07].[dbo].[login].id_login and [MVH_07].[dbo].[Order].id_order = '" + id_order+ "' and permission != '1'";
+            List<Information_Order> L_ifor_order = new List<Information_Order>();
+            foreach( DataRow i in DBHelper.Instance.executeNonQuery(sql).Rows)
+            {
+                Information_Order obj = new Information_Order
+                {
+                    Id_Order = i["id_order"].ToString(),
+                    NameVehicle = i["name"].ToString(),
+                    Departure = i["departure"].ToString(),
+                    Arrival = i["arrival"].ToString(),
+                    Date = Convert.ToDateTime(i["date"].ToString()),
+                    Time_Start = Convert.ToDateTime(i["time_start"].ToString()),
+                    Number_Ticket = i["numberTicket"].ToString(),
+                    Total_price = i["total_price"].ToString(),
+                    Date_Order = i["date_order"].ToString(),
+                    Name_Customer = i["name1"].ToString(),
+                    Phone_Custemer = i["phone"].ToString()
+                };
+                L_ifor_order.Add(obj);
+            }
+            return L_ifor_order;
+
+        }
+        public List<Information_Order> getall_Ordersearch(string id_order)
+        {
+            string sql = "select [MVH_07].[dbo].[Order].id_order,Vehicle.name ,departure,arrival,DetailRoute.date,DetailRoute.time_start,numberTicket,total_price,date_order,info_person.name as name1,info_person.phone from Vehicle, DetailRoute, Route, orderSeat, Seat, info_person,[MVH_07].[dbo].[Order],[MVH_07].[dbo].[login] where Route.id_route = DetailRoute.id_route and Vehicle.id_vehicle = DetailRoute.id_vehicle and Vehicle.id_vehicle = Seat.id_vehicle and DetailRoute.id_detRoute = orderSeat.id_detRoute and Seat.id_seat = orderSeat.id_seat and orderSeat.id_order = [MVH_07].[dbo].[Order].id_order and [MVH_07].[dbo].[Order].id_person = info_person.id_person and info_person.id_login =[MVH_07].[dbo].[login].id_login and [MVH_07].[dbo].[Order].id_order = '" + id_order + "'";
+            List<Information_Order> L_ifor_order = new List<Information_Order>();
+            foreach (DataRow i in DBHelper.Instance.executeNonQuery(sql).Rows)
+            {
+                Information_Order obj = new Information_Order
+                {
+                    Id_Order = i["id_order"].ToString(),
+                    NameVehicle = i["name"].ToString(),
+                    Departure = i["departure"].ToString(),
+                    Arrival = i["arrival"].ToString(),
+                    Date = Convert.ToDateTime(i["date"].ToString()),
+                    Time_Start = Convert.ToDateTime(i["time_start"].ToString()),
+                    Number_Ticket = i["numberTicket"].ToString(),
+                    Total_price = i["total_price"].ToString(),
+                    Date_Order = i["date_order"].ToString(),
+                    Name_Customer = i["name1"].ToString(),
+                    Phone_Custemer = i["phone"].ToString()
+                };
+                L_ifor_order.Add(obj);
+            }
+            return L_ifor_order;
+
+        }
+        public List<Information_Order> getall_Ordersearch_Day(string day1,string  day2)
+        {
+            List<Information_Order> L_ifor_order = new List<Information_Order>();
+            string sql= "select [MVH_07].[dbo].[Order].id_order,Vehicle.name ,departure,arrival,DetailRoute.date,DetailRoute.time_start,numberTicket,total_price,date_order,info_person.name as name1,info_person.phone from Vehicle, DetailRoute, Route, orderSeat, Seat, info_person,[MVH_07].[dbo].[Order],[MVH_07].[dbo].[login] where Route.id_route = DetailRoute.id_route and Vehicle.id_vehicle = DetailRoute.id_vehicle and Vehicle.id_vehicle = Seat.id_vehicle and DetailRoute.id_detRoute = orderSeat.id_detRoute and Seat.id_seat = orderSeat.id_seat and orderSeat.id_order = [MVH_07].[dbo].[Order].id_order and [MVH_07].[dbo].[Order].id_person = info_person.id_person and info_person.id_login =[MVH_07].[dbo].[login].id_login and date_order between '"+day1 +"' and '"+day2+"'";
+            foreach (DataRow i in DBHelper.Instance.executeNonQuery(sql).Rows)
+            {
+                Information_Order obj = new Information_Order
+                {
+                    Id_Order = i["id_order"].ToString(),
+                    NameVehicle = i["name"].ToString(),
+                    Departure = i["departure"].ToString(),
+                    Arrival = i["arrival"].ToString(),
+                    Date = Convert.ToDateTime(i["date"].ToString()),
+                    Time_Start = Convert.ToDateTime(i["time_start"].ToString()),
+                    Number_Ticket = i["numberTicket"].ToString(),
+                    Total_price = i["total_price"].ToString(),
+                    Date_Order = i["date_order"].ToString(),
+                    Name_Customer = i["name1"].ToString(),
+                    Phone_Custemer = i["phone"].ToString()
+                };
+                L_ifor_order.Add(obj);
+            }
+            return L_ifor_order;
+        }
+        public List<Information_Order> getall_Order()
+        {
+            string sql = "select [MVH_07].[dbo].[Order].id_order,Vehicle.name ,departure,arrival,DetailRoute.date,DetailRoute.time_start,numberTicket,total_price,date_order,info_person.name as name1,info_person.phone from Vehicle, DetailRoute, Route, orderSeat, Seat, info_person,[MVH_07].[dbo].[Order],[MVH_07].[dbo].[login] where Route.id_route = DetailRoute.id_route and Vehicle.id_vehicle = DetailRoute.id_vehicle and Vehicle.id_vehicle = Seat.id_vehicle and DetailRoute.id_detRoute = orderSeat.id_detRoute and Seat.id_seat = orderSeat.id_seat and orderSeat.id_order = [MVH_07].[dbo].[Order].id_order and [MVH_07].[dbo].[Order].id_person = info_person.id_person and info_person.id_login =[MVH_07].[dbo].[login].id_login and info_person.permission != '1'";
+            List<Information_Order> L_ifor_order = new List<Information_Order>();
+            foreach (DataRow i in DBHelper.Instance.executeNonQuery(sql).Rows)
+            {
+                Information_Order obj = new Information_Order
+                {
+                    Id_Order = i["id_order"].ToString(),
+                    NameVehicle = i["name"].ToString(),
+                    Departure = i["departure"].ToString(),
+                    Arrival = i["arrival"].ToString(),
+                    Date = Convert.ToDateTime(i["date"].ToString()),
+                    Time_Start = Convert.ToDateTime(i["time_start"].ToString()),
+                    Number_Ticket = i["numberTicket"].ToString(),
+                    Total_price = i["total_price"].ToString(),
+                    Date_Order = i["date_order"].ToString(),
+                    Name_Customer = i["name1"].ToString(),
+                    Phone_Custemer = i["phone"].ToString()
+                };
+                L_ifor_order.Add(obj);
+            }
+            return L_ifor_order;
+
+        }
         public List<historyBook> getHistoryBook()
         {
             List<historyBook> list = new List<historyBook>();

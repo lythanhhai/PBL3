@@ -37,6 +37,7 @@ namespace PBL3_DATVEXE.View
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.veCuaToi = new System.Windows.Forms.Button();
             this.searchRout1 = new PBL3_DATVEXE.View.SearchRout();
+            this.but_dangxuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +82,7 @@ namespace PBL3_DATVEXE.View
             this.veCuaToi.BackColor = System.Drawing.Color.Transparent;
             this.veCuaToi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.veCuaToi.Location = new System.Drawing.Point(0, 320);
+            this.veCuaToi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.veCuaToi.Name = "veCuaToi";
             this.veCuaToi.Size = new System.Drawing.Size(255, 74);
             this.veCuaToi.TabIndex = 8;
@@ -96,17 +98,32 @@ namespace PBL3_DATVEXE.View
             this.searchRout1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchRout1.date = new System.DateTime(((long)(0)));
             this.searchRout1.Location = new System.Drawing.Point(254, 0);
-            this.searchRout1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchRout1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.searchRout1.Name = "searchRout1";
             this.searchRout1.Size = new System.Drawing.Size(1264, 761);
             this.searchRout1.TabIndex = 7;
+            this.searchRout1.Load += new System.EventHandler(this.searchRout1_Load);
+            // 
+            // but_dangxuat
+            // 
+            this.but_dangxuat.BackColor = System.Drawing.Color.Transparent;
+            this.but_dangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_dangxuat.Location = new System.Drawing.Point(0, 427);
+            this.but_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.but_dangxuat.Name = "but_dangxuat";
+            this.but_dangxuat.Size = new System.Drawing.Size(255, 74);
+            this.but_dangxuat.TabIndex = 9;
+            this.but_dangxuat.Text = "Đăng xuất";
+            this.but_dangxuat.UseVisualStyleBackColor = false;
+            this.but_dangxuat.Click += new System.EventHandler(this.but_dangxuat_Click);
             // 
             // AffterLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1517, 600);
+            this.ClientSize = new System.Drawing.Size(1516, 752);
+            this.Controls.Add(this.but_dangxuat);
             this.Controls.Add(this.veCuaToi);
             this.Controls.Add(this.searchRout1);
             this.Controls.Add(this.pictureBox2);
@@ -131,5 +148,6 @@ namespace PBL3_DATVEXE.View
         private System.Windows.Forms.Timer timer1;
         private SearchRout searchRout1;
         private System.Windows.Forms.Button veCuaToi;
+        private System.Windows.Forms.Button but_dangxuat;
     }
 }

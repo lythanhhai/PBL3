@@ -187,6 +187,7 @@
     <Compile Include="DTO\DTO_route.cs" />
     <Compile Include="DTO\DTO_vehicle.cs" />
     <Compile Include="DTO\historyBook.cs" />
+    <Compile Include="DTO\Information_Order.cs" />
     <Compile Include="DTO\Login.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="DTO\orderSeat.cs" />
@@ -225,7 +226,7 @@
     <Compile Include="View\confirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\confirm.Designer.cs">
+    <Compile Include="View\confirm.designer.cs">
       <DependentUpon>confirm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\datVe.cs">
@@ -245,6 +246,12 @@
     </Compile>
     <Compile Include="View\DetailSchedule.designer.cs">
       <DependentUpon>DetailSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormChonPTTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormChonPTTT.designer.cs">
+      <DependentUpon>FormChonPTTT.cs</DependentUpon>
     </Compile>
     <Compile Include="View\historyBook.cs">
       <SubType>Form</SubType>
@@ -291,7 +298,7 @@
     <Compile Include="View\seeRoute.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\seeRoute.Designer.cs">
+    <Compile Include="View\seeRoute.designer.cs">
       <DependentUpon>seeRoute.cs</DependentUpon>
     </Compile>
     <Compile Include="View\seeTicket.cs">
@@ -303,7 +310,7 @@
     <Compile Include="View\thanhtoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\thanhtoan.Designer.cs">
+    <Compile Include="View\thanhtoan.designer.cs">
       <DependentUpon>thanhtoan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TK_TK.cs">
@@ -352,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DetailSchedule.resx">
       <DependentUpon>DetailSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormChonPTTT.resx">
+      <DependentUpon>FormChonPTTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\historyBook.resx">
       <DependentUpon>historyBook.cs</DependentUpon>
@@ -425,6 +435,9 @@
     <Content Include="Image\ImageH\user.png" />
     <Content Include="Image\ImageH\UserEvent.png" />
     <Content Include="Image\ImageH\xe-khách.jpg" />
+    <None Include="Resources\hinh-nen-dep-mau-trang_104324637.jpg" />
+    <None Include="Resources\Online-mobile-banking-and-internet-banking-isometric-design-concept-on-transparent-background-PNG.png" />
+    <None Include="Resources\MOMO.png" />
     <None Include="Resources\clock2.png" />
     <None Include="Resources\user1.png" />
     <None Include="Resources\user.png" />

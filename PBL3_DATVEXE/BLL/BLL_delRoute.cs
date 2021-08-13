@@ -137,11 +137,7 @@ namespace PBL3_DATVEXE.BLL
         }
         
        
-        public string getmssv()
-        {
-            string a = "";
-            return a;
-        }
+       
         
 
         public DTO_delRoute_xl GetsvByid_detroute(string id_delroute)
@@ -158,6 +154,53 @@ namespace PBL3_DATVEXE.BLL
                 }
                 return s;
             }
+        }
+        public int getRoute(string id_delroute)
+        {
+                int s = 0;
+            foreach (DTO_delRoute_xl i in DAL_DelRoute.Instance.getalldelroute_xl())
+            {
+                if (i.id_delroute == id_delroute)
+                {
+                    foreach (DTO_route j in BLL_Route.Instance.getallRoute())
+                    {
+                        if (j.deleted == false)
+                        {
+                            s++;
+                            if (i.id_route == j.id_route)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            return s;
+               
+            
+        }
+        public int getVehicle(string id_delroute)
+        {
+            int s = 0;
+            foreach (DTO_delRoute_xl i in DAL_DelRoute.Instance.getalldelroute_xl())
+            {
+                if (i.id_delroute == id_delroute)
+                {
+                    foreach (DTO_vehicle j in BLL_vehicle.Instance.getallvehicle())
+                    {
+                        
+                            s++;
+                            if (i.id_vehicle == j.id_vehicle)
+                            {
+                                break;
+                            }
+                        
+                    }
+                }
+            }
+            return s;
+
+
         }
 
 

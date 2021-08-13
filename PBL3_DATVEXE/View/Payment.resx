@@ -177,34 +177,34 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lb_STK.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lb_STK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lb_STK.Location" type="System.Drawing.Point, System.Drawing">
     <value>219, 340</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lb_STK.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 25</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="lb_STK.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="lb_STK.Text" xml:space="preserve">
     <value>88888888889</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;lb_STK.Name" xml:space="preserve">
+    <value>lb_STK</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;lb_STK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lb_STK.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lb_STK.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="lbid_order.AutoSize" type="System.Boolean, mscorlib">
@@ -297,34 +297,34 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbUpND.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbUpND.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbUpND.Location" type="System.Drawing.Point, System.Drawing">
     <value>74, 251</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbUpND.Size" type="System.Drawing.Size, System.Drawing">
     <value>406, 20</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbUpND.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lbUpND.Text" xml:space="preserve">
     <value>Mời bạn gửi tiền vào TK dưới dây ngân hàng AgriBank</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lbUpND.Name" xml:space="preserve">
+    <value>lbUpND</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbUpND.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbUpND.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbUpND.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="labelcountdown.AutoSize" type="System.Boolean, mscorlib">
@@ -388,7 +388,7 @@
     <value>Flat</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 441</value>
+    <value>237, 440</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 38</value>
@@ -418,10 +418,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>555, 491</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>517, 491</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Payment</value>

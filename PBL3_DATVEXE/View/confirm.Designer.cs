@@ -34,6 +34,7 @@ namespace PBL3_DATVEXE.View
             this.lbPrice = new System.Windows.Forms.Label();
             this.Seat1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.but_troveDetailDche = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -84,6 +85,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbGhe = new Bunifu.UI.WinForms.BunifuLabel();
             this.But_tiep = new System.Windows.Forms.Button();
+            this.but_troveDetailschedule = new System.Windows.Forms.Button();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGroupBox1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -95,7 +97,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(497, 631);
+            this.label1.Location = new System.Drawing.Point(512, 631);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 27);
             this.label1.TabIndex = 2;
@@ -106,7 +108,7 @@ namespace PBL3_DATVEXE.View
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lbPrice.Location = new System.Drawing.Point(628, 629);
+            this.lbPrice.Location = new System.Drawing.Point(652, 629);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(26, 29);
             this.lbPrice.TabIndex = 3;
@@ -156,6 +158,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.but_troveDetailDche);
             this.bunifuPanel2.Controls.Add(this.label9);
             this.bunifuPanel2.Controls.Add(this.label6);
             this.bunifuPanel2.Controls.Add(this.label7);
@@ -164,17 +167,29 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel2.Controls.Add(this.bunifuImageButton1);
             this.bunifuPanel2.Controls.Add(this.chuaDat);
             this.bunifuPanel2.Controls.Add(this.bunifuGroupBox1);
-            this.bunifuPanel2.Location = new System.Drawing.Point(21, 12);
+            this.bunifuPanel2.Location = new System.Drawing.Point(21, 18);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(918, 540);
+            this.bunifuPanel2.Size = new System.Drawing.Size(918, 534);
             this.bunifuPanel2.TabIndex = 8;
+            // 
+            // but_troveDetailDche
+            // 
+            this.but_troveDetailDche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
+            this.but_troveDetailDche.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_troveDetailDche.Location = new System.Drawing.Point(3, 16);
+            this.but_troveDetailDche.Name = "but_troveDetailDche";
+            this.but_troveDetailDche.Size = new System.Drawing.Size(147, 52);
+            this.but_troveDetailDche.TabIndex = 32;
+            this.but_troveDetailDche.Text = "Trở về";
+            this.but_troveDetailDche.UseVisualStyleBackColor = false;
+            this.but_troveDetailDche.Click += new System.EventHandler(this.but_troveDetailSche_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 96);
+            this.label9.Location = new System.Drawing.Point(19, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 25);
             this.label9.TabIndex = 31;
@@ -184,7 +199,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(118, 364);
+            this.label6.Location = new System.Drawing.Point(118, 406);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 22);
             this.label6.TabIndex = 30;
@@ -194,7 +209,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(118, 172);
+            this.label7.Location = new System.Drawing.Point(118, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 22);
             this.label7.TabIndex = 29;
@@ -204,7 +219,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(118, 263);
+            this.label8.Location = new System.Drawing.Point(118, 298);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 22);
             this.label8.TabIndex = 28;
@@ -230,7 +245,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuImageButton3.ImageSize = new System.Drawing.Size(49, 49);
             this.bunifuImageButton3.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.bunifuImageButton3.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.InitialImage")));
-            this.bunifuImageButton3.Location = new System.Drawing.Point(24, 354);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(24, 394);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Rotation = 180;
             this.bunifuImageButton3.ShowActiveImage = true;
@@ -264,7 +279,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuImageButton1.ImageSize = new System.Drawing.Size(49, 49);
             this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 160);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 182);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 180;
             this.bunifuImageButton1.ShowActiveImage = true;
@@ -298,7 +313,7 @@ namespace PBL3_DATVEXE.View
             this.chuaDat.ImageSize = new System.Drawing.Size(49, 49);
             this.chuaDat.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.chuaDat.InitialImage = ((System.Drawing.Image)(resources.GetObject("chuaDat.InitialImage")));
-            this.chuaDat.Location = new System.Drawing.Point(24, 251);
+            this.chuaDat.Location = new System.Drawing.Point(24, 286);
             this.chuaDat.Name = "chuaDat";
             this.chuaDat.Rotation = 180;
             this.chuaDat.ShowActiveImage = true;
@@ -666,6 +681,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 3;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.but_troveDetailschedule);
             this.bunifuPanel3.Controls.Add(this.label5);
             this.bunifuPanel3.Controls.Add(this.label4);
             this.bunifuPanel3.Controls.Add(this.label3);
@@ -685,7 +701,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(83, 381);
+            this.label5.Location = new System.Drawing.Point(80, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 22);
             this.label5.TabIndex = 25;
@@ -695,7 +711,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(83, 192);
+            this.label4.Location = new System.Drawing.Point(80, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 22);
             this.label4.TabIndex = 24;
@@ -705,7 +721,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 283);
+            this.label3.Location = new System.Drawing.Point(80, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 22);
             this.label3.TabIndex = 23;
@@ -715,7 +731,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 90);
+            this.label2.Location = new System.Drawing.Point(8, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 22;
@@ -741,7 +757,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuImageButton2.ImageSize = new System.Drawing.Size(49, 49);
             this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(13, 367);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(13, 381);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Rotation = 180;
             this.bunifuImageButton2.ShowActiveImage = true;
@@ -1156,7 +1172,7 @@ namespace PBL3_DATVEXE.View
             this.datRoi1.ImageSize = new System.Drawing.Size(49, 49);
             this.datRoi1.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.datRoi1.InitialImage = ((System.Drawing.Image)(resources.GetObject("datRoi1.InitialImage")));
-            this.datRoi1.Location = new System.Drawing.Point(13, 179);
+            this.datRoi1.Location = new System.Drawing.Point(13, 198);
             this.datRoi1.Name = "datRoi1";
             this.datRoi1.Rotation = 180;
             this.datRoi1.ShowActiveImage = true;
@@ -1190,7 +1206,7 @@ namespace PBL3_DATVEXE.View
             this.chuaDat1.ImageSize = new System.Drawing.Size(49, 49);
             this.chuaDat1.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.chuaDat1.InitialImage = ((System.Drawing.Image)(resources.GetObject("chuaDat1.InitialImage")));
-            this.chuaDat1.Location = new System.Drawing.Point(13, 273);
+            this.chuaDat1.Location = new System.Drawing.Point(13, 289);
             this.chuaDat1.Name = "chuaDat1";
             this.chuaDat1.Rotation = 180;
             this.chuaDat1.ShowActiveImage = true;
@@ -1606,12 +1622,11 @@ namespace PBL3_DATVEXE.View
             this.lbGhe.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbGhe.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbGhe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbGhe.Location = new System.Drawing.Point(24, 617);
+            this.lbGhe.Location = new System.Drawing.Point(24, 631);
             this.lbGhe.Name = "lbGhe";
             this.lbGhe.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbGhe.Size = new System.Drawing.Size(10, 25);
+            this.lbGhe.Size = new System.Drawing.Size(0, 0);
             this.lbGhe.TabIndex = 21;
-            this.lbGhe.Text = "1";
             this.lbGhe.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbGhe.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1621,13 +1636,25 @@ namespace PBL3_DATVEXE.View
             this.But_tiep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.But_tiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.But_tiep.ForeColor = System.Drawing.Color.White;
-            this.But_tiep.Location = new System.Drawing.Point(745, 617);
+            this.But_tiep.Location = new System.Drawing.Point(781, 617);
             this.But_tiep.Name = "But_tiep";
             this.But_tiep.Size = new System.Drawing.Size(121, 52);
             this.But_tiep.TabIndex = 22;
             this.But_tiep.Text = "Tiếp tục";
             this.But_tiep.UseVisualStyleBackColor = false;
             this.But_tiep.Click += new System.EventHandler(this.But_tiep_Click);
+            // 
+            // but_troveDetailschedule
+            // 
+            this.but_troveDetailschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
+            this.but_troveDetailschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_troveDetailschedule.Location = new System.Drawing.Point(3, 6);
+            this.but_troveDetailschedule.Name = "but_troveDetailschedule";
+            this.but_troveDetailschedule.Size = new System.Drawing.Size(147, 52);
+            this.but_troveDetailschedule.TabIndex = 33;
+            this.but_troveDetailschedule.Text = "Trở về";
+            this.but_troveDetailschedule.UseVisualStyleBackColor = false;
+            this.but_troveDetailschedule.Click += new System.EventHandler(this.but_troveDetailSche_Click);
             // 
             // confirm
             // 
@@ -1640,8 +1667,8 @@ namespace PBL3_DATVEXE.View
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel3);
+            this.Controls.Add(this.bunifuPanel2);
             this.Name = "confirm";
             this.Text = "confirm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.confirm_FormClosed);
@@ -1713,5 +1740,7 @@ namespace PBL3_DATVEXE.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button But_tiep;
+        private System.Windows.Forms.Button but_troveDetailDche;
+        private System.Windows.Forms.Button but_troveDetailschedule;
     }
 }

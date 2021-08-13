@@ -9,8 +9,9 @@ namespace PBL3_DATVEXE.DTO
     class DTO_QLVX1
     {
         public string id_order { get; set; }
-        //  public DateTime date_order { get; set; }
+          public DateTime date_order { get; set; }
            public string date_route { get; set; }
+        
         public string name_person { get; set; }
         public string phone { get; set; }
         // public string address { get; set; }

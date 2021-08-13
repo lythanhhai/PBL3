@@ -129,16 +129,21 @@ namespace PBL3_DATVEXE.View
             }
 
         }
-
-
-        public double getGia()
-        {
+         public string stringGia()
+         {
             string gia = "";
-            for(int i = 0; i < this.gia.Length - 1; i++)
+            for (int i = 0; i < this.gia.Length - 1; i++)
             {
                 gia += this.gia[i];
-            }    
-            return Convert.ToDouble(gia);
+            }
+            return gia;
+         }
+
+         public double getGia()
+        {
+            double gia1 = 0;
+            double.TryParse(stringGia(),out gia1);
+            return gia1;
         }
         public string getId_detRoute()
         {
@@ -152,7 +157,6 @@ namespace PBL3_DATVEXE.View
         public seeRoute()
         {
             InitializeComponent();
-
         }
        
 
@@ -174,40 +178,11 @@ namespace PBL3_DATVEXE.View
             cf.d2 += new confirm.getIdRoute_Vehicle(getId_detRoute);
             cf.d3 += new confirm.getIdRoute_Vehicle(getId_Vehicle);
             cf.Show();
-
+            ((DetailSchedule)this.TopLevelControl).Hide();
+            
         }
 
-        //[DllImport("user32.dll")]
-        //static extern IntPtr GetWindowDC(IntPtr hWnd);
-        //[DllImport("User32.dll")]
-        //static extern int ReleaseDC(IntPtr hWnd, IntPtr hDC);
-        //protected override void WndProc(ref Message m)
-        //{
-        //    const int WM_NCPAINT = 133;
-        //    if (m.Msg == WM_NCPAINT)
-        //    {
-        //        IntPtr hdc = GetWindowDC(m.HWnd);
-        //        Graphics g = Graphics.FromHdc(hdc);
-        //        //this.Width - 1 this.Height - 1
-        //        Rectangle rDraw = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-        //        Pen pBottom = new Pen(Color.Gainsboro, 3);
-        //        Pen pTop = new Pen(Color.Gainsboro, 3);
-        //        g.DrawRectangle(pBottom, rDraw);
-        //        Point[] pts = new Point[3];
-
-        //        pts[0] = new Point(0, this.Height - 1);
-        //        pts[1] = new Point(0, 0);
-        //        pts[2] = new Point(this.Width - 1, 0);
-
-
-        //        g.DrawLines(pTop, pts);
-        //        ReleaseDC(this.Handle, hdc);
-        //    }
-        //    else
-        //    {
-        //        base.WndProc(ref m);
-        //    }
-        //}
+        
 
         private void ParentPaint(object sender, PaintEventArgs e)
         {

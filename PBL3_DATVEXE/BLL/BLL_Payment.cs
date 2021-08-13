@@ -37,10 +37,13 @@ namespace PBL3_DATVEXE.BLL
         }
         public void DeletePayment(string id_order,string id_person)
         {
-            string sql1 = "delete from orderSeat where id_order='" + id_order + "'";
+            //string sql1 = "delete from orderSeat where id_order='" + id_order + "'";
+            string sql1 = "update orderSeat set status = 0 where id_order='" + id_order + "'";
+            string sql11 = "update orderSeat set id_order = null where id_order='" + id_order + "'";
             string sql2 = "delete from [MVH_07].[dbo].[Order] where id_order='" + id_order + "'";
             string sql3 = "delete from info_person where id_person='" + id_person + "'";
             DB_H.Instance.Ex(sql1);
+            DB_H.Instance.Ex(sql11);
             DB_H.Instance.Ex(sql2);
             DB_H.Instance.Ex(sql3);
         }

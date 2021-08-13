@@ -19,7 +19,7 @@ namespace PBL3_DATVEXE.View
             InitializeComponent();
             load();
             load_statistics();
-            SetCBBSort();
+          //  SetCBBSort();
         }
         public void load_statistics()
         {
@@ -53,7 +53,7 @@ namespace PBL3_DATVEXE.View
                 });
             }
           //  bunifuDropdown2.SelectedIndex = 0;
-            List<DTO_DelRoute> list3 = BLL_delRoute.Instance.getallDetRoute();
+           /* List<DTO_DelRoute> list3 = BLL_delRoute.Instance.getallDetRoute();
             bunifuDropdown3.Items.Add(new CBBitem
             {
                 Text = "",
@@ -66,11 +66,11 @@ namespace PBL3_DATVEXE.View
                     Value = i.id_delroute,
                     Text = i.date.ToShortDateString() + "--" + i.time_start
                 });
-            }
+            }*/
          //   bunifuDropdown3.SelectedIndex = 0;
 
         }
-        public void SetCBBSort()
+      /*  public void SetCBBSort()
         {
 
             bunifuDropdown4.Items.Add("number_ticket");
@@ -80,10 +80,12 @@ namespace PBL3_DATVEXE.View
 
 
 
-        }
+        }*/
+     
         public void load()
         {
-            bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY1("","","","");
+
+            bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY("", "", "");
         }
         public void Show1(string route, string vehicle, string date_route)
         {
@@ -91,43 +93,40 @@ namespace PBL3_DATVEXE.View
            // bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY(route, vehicle, date_route);
 
         }
-        public void Show2(string route, string vehicle, string date_route, string name_person)
+        public void Show2(string route, string vehicle, DateTime a, DateTime b, string name_person)
         {
 
-            bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY1(route, vehicle, date_route, name_person);
+            bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY1(route, vehicle, a,b, name_person);
 
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
-        {if(bunifuDropdown1.Text=="Route"|| bunifuDropdown2.Text == "Vehicle"|| bunifuDropdown3.Text == "Date")
+        {if(bunifuDropdown1.Text=="Route"|| bunifuDropdown2.Text == "Vehicle")
                 
             {
                 MessageBox.Show("ban chua chon truong thich hop");
             }
+
         else {
 
-                Show2(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, ((CBBitem)bunifuDropdown3.SelectedItem).Text, bunifuTextBox1.Text);
+                
+                
+                   // Show2(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, bunifuDatePicker1.Value, bunifuDatePicker2.Value, bunifuTextBox1.Text);
+                    bunifuLabel3.Text = BLL_QLVX.Instance.tt(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, bunifuDatePicker1.Value, bunifuDatePicker2.Value, bunifuTextBox1.Text).ToString();
+                    bunifuLabel4.Text = BLL_QLVX.Instance.tp(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, bunifuDatePicker1.Value, bunifuDatePicker2.Value, bunifuTextBox1.Text).ToString();
+               
+                Show2(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, bunifuDatePicker1.Value, bunifuDatePicker2.Value, bunifuTextBox1.Text);
             }
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.Text == "Route" || bunifuDropdown2.Text == "Vehicle" || bunifuDropdown3.Text == "Date")
-
-            {
-                MessageBox.Show("ban chua chon truong thich hop");
-            }
-            else
-            {
-                Show2(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, ((CBBitem)bunifuDropdown3.SelectedItem).Text, bunifuTextBox1.Text);
-                bunifuLabel3.Text = BLL_QLVX.Instance.tt(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, ((CBBitem)bunifuDropdown3.SelectedItem).Text, bunifuTextBox1.Text).ToString();
-                bunifuLabel4.Text = BLL_QLVX.Instance.tp(((CBBitem)bunifuDropdown1.SelectedItem).Text, ((CBBitem)bunifuDropdown2.SelectedItem).Text, ((CBBitem)bunifuDropdown3.SelectedItem).Text, bunifuTextBox1.Text).ToString();
-            }
+            load();
         }
 
-        private void bunifuDropdown4_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void bunifuDropdown4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.Text == "Route" || bunifuDropdown2.Text == "Vehicle" || bunifuDropdown3.Text == "Date")
+            if (bunifuDropdown1.Text == "Route" || bunifuDropdown2.Text == "Vehicle" )
 
             {
                 MessageBox.Show("ban chua chon truong thich hop");
@@ -144,6 +143,7 @@ namespace PBL3_DATVEXE.View
 
                 }
             }
-        }
+        
+        }*/
     }
 }

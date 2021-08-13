@@ -42,6 +42,7 @@ namespace PBL3_DATVEXE.View
             this.lbGiaThapNhat = new System.Windows.Forms.Label();
             this.pnGiaCaoNhat = new System.Windows.Forms.Panel();
             this.lbGiaCaoNhat = new System.Windows.Forms.Label();
+            this.but_troveAfterlogin = new System.Windows.Forms.Button();
             this.gb1.SuspendLayout();
             this.pnGioSomNhat.SuspendLayout();
             this.pnGioMuonNhat.SuspendLayout();
@@ -116,7 +117,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 42);
+            this.label1.Location = new System.Drawing.Point(197, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 8;
@@ -126,7 +127,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.pnGioSomNhat.Controls.Add(this.lbGioSomNhat);
             this.pnGioSomNhat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnGioSomNhat.Location = new System.Drawing.Point(278, 28);
+            this.pnGioSomNhat.Location = new System.Drawing.Point(350, 28);
             this.pnGioSomNhat.Name = "pnGioSomNhat";
             this.pnGioSomNhat.Size = new System.Drawing.Size(150, 55);
             this.pnGioSomNhat.TabIndex = 9;
@@ -147,7 +148,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.pnGioMuonNhat.Controls.Add(this.lbGioMuonNhat);
             this.pnGioMuonNhat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnGioMuonNhat.Location = new System.Drawing.Point(459, 28);
+            this.pnGioMuonNhat.Location = new System.Drawing.Point(533, 28);
             this.pnGioMuonNhat.Name = "pnGioMuonNhat";
             this.pnGioMuonNhat.Size = new System.Drawing.Size(160, 55);
             this.pnGioMuonNhat.TabIndex = 10;
@@ -168,7 +169,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.pnGiaThapNhat.Controls.Add(this.lbGiaThapNhat);
             this.pnGiaThapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnGiaThapNhat.Location = new System.Drawing.Point(645, 28);
+            this.pnGiaThapNhat.Location = new System.Drawing.Point(731, 28);
             this.pnGiaThapNhat.Name = "pnGiaThapNhat";
             this.pnGiaThapNhat.Size = new System.Drawing.Size(145, 55);
             this.pnGiaThapNhat.TabIndex = 10;
@@ -189,7 +190,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.pnGiaCaoNhat.Controls.Add(this.lbGiaCaoNhat);
             this.pnGiaCaoNhat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnGiaCaoNhat.Location = new System.Drawing.Point(820, 28);
+            this.pnGiaCaoNhat.Location = new System.Drawing.Point(909, 28);
             this.pnGiaCaoNhat.Name = "pnGiaCaoNhat";
             this.pnGiaCaoNhat.Size = new System.Drawing.Size(145, 55);
             this.pnGiaCaoNhat.TabIndex = 10;
@@ -206,6 +207,18 @@ namespace PBL3_DATVEXE.View
             this.lbGiaCaoNhat.Text = "Giá cao nhất";
             this.lbGiaCaoNhat.Click += new System.EventHandler(this.lbGioSomNhat_Click);
             // 
+            // but_troveAfterlogin
+            // 
+            this.but_troveAfterlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
+            this.but_troveAfterlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_troveAfterlogin.Location = new System.Drawing.Point(12, 28);
+            this.but_troveAfterlogin.Name = "but_troveAfterlogin";
+            this.but_troveAfterlogin.Size = new System.Drawing.Size(147, 55);
+            this.but_troveAfterlogin.TabIndex = 15;
+            this.but_troveAfterlogin.Text = "Trở về";
+            this.but_troveAfterlogin.UseVisualStyleBackColor = false;
+            this.but_troveAfterlogin.Click += new System.EventHandler(this.but_trove_Click);
+            // 
             // DetailSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -213,6 +226,7 @@ namespace PBL3_DATVEXE.View
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1075, 718);
+            this.Controls.Add(this.but_troveAfterlogin);
             this.Controls.Add(this.pnGiaCaoNhat);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pnGiaThapNhat);
@@ -252,5 +266,6 @@ namespace PBL3_DATVEXE.View
         private System.Windows.Forms.Label lbGiaThapNhat;
         private System.Windows.Forms.Panel pnGiaCaoNhat;
         private System.Windows.Forms.Label lbGiaCaoNhat;
+        private System.Windows.Forms.Button but_troveAfterlogin;
     }
 }

@@ -14,7 +14,7 @@ using PBL3_DATVEXE.DTO;
 namespace PBL3_DATVEXE.View
 {
     public partial class Payment : Form
-    {
+    {   
         int second = -1;
         int minute = 0;
         int ms = 0;
@@ -22,7 +22,7 @@ namespace PBL3_DATVEXE.View
         private string id_person { get; set; }
         private string id_order { get; set; }
        
-        public Payment(string id_login,string id_person,string id_order)
+        public Payment(string id_login,string id_person,string id_order,string s,string ND)
         {
             InitializeComponent();
             setCountdown();
@@ -30,6 +30,8 @@ namespace PBL3_DATVEXE.View
             this.id_person =id_person;
             this.id_order = id_order;
             lbid_order.Text = id_order;
+            lb_STK.Text = s;
+            lbUpND.Text = ND;
         }
         public void setCountdown()
         {
@@ -48,7 +50,7 @@ namespace PBL3_DATVEXE.View
                     second = -1;
                     minute++;
                 }
-                if (minute == 2)
+                if (minute == 30)
                 {
                     BLL_Payment.Instance.DeletePayment(id_order,id_person);
                     timer1.Enabled = false;
@@ -73,6 +75,11 @@ namespace PBL3_DATVEXE.View
             timer1.Enabled = false;
             MessageBox.Show("Giao dịch đã hủy. Cảm ơn quý khách!");
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

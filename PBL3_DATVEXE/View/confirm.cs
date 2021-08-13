@@ -20,7 +20,6 @@ namespace PBL3_DATVEXE.View
         public delegate double getGia();
         public getGia d { get; set; }
 
-
         // khai báo delegate lấy id_route and it_vehicle từ detailschedule sang confirm
         public delegate string getIdRoute_Vehicle();
         public getIdRoute_Vehicle d2 { get; set; }
@@ -44,6 +43,8 @@ namespace PBL3_DATVEXE.View
         
         public void algorithmChooseSeat(object sender)
         {
+            
+
             // bunifuImageButton
             List<orderSeat> listOrderSeats = BLL_TKVX.Instance.getAllOrderSeat_BLL();
             List<Seat> listSeats = new List<Seat>();
@@ -61,95 +62,102 @@ namespace PBL3_DATVEXE.View
             if(algorithmCompareImage((Bitmap)t.Image) == true)
             {
                 
-                //t.Image = System.Drawing.Bitmap.FromFile(@"D:\image\Seat icon\Chua.png");
-                t.Image = global::PBL3_DATVEXE.Properties.Resources.Chua;
-                count--;
 
-                lbPrice.Text = Convert.ToString(count * d());
-                try
-                {
-                    // kiểm tra xem loại xe nào
-                    if(getTypevehicle() == "10 chỗ")
-                    {
-                        listNameGhe.Remove(t.Name.ToString());
-                    }
-                    else if(getTypevehicle() == "20 chỗ")
-                    {
-                        listNameGhe.Remove(t.Name.Split('_')[0].ToString());
-                    }   
-                    else
-                    {
+                    t.Image = global::PBL3_DATVEXE.Properties.Resources.Chua;
+                    count--;
 
-                    }                        
-
-                    count1--;
-                    if (count1 == 0)
+                    lbPrice.Text = Convert.ToString(count * d());
+                    try
                     {
-                        lbGhe.Text = "";
-                    }
-                    else if (count1 == 1)
-                    {
-                        lbGhe.Text = lbGhe.Text.Split(',')[0].ToString();
-                    }
-                    else
-                    {
-
-                        string[] arr = lbGhe.Text.Split(',');
-                        string str = "";
-                        for (int m = 0; m < arr.Length - 1; m++)
+                        // kiểm tra xem loại xe nào
+                        if(getTypevehicle() == "10 chỗ")
                         {
-                            if (m != arr.Length - 2)
-                            {
-                                str += arr[m] + ", ";
-                            }
-                            else
-                            {
-                                str += arr[m];
-                            }
-
+                            listNameGhe.Remove(t.Name.ToString());
                         }
-                        lbGhe.Text = str;
-                    }
+                        else if(getTypevehicle() == "20 chỗ")
+                        {
+                            listNameGhe.Remove(t.Name.Split('_')[0].ToString());
+                        }   
+                        else
+                        {
 
-                }
-                catch (Exception r)
-                {
-                    MessageBox.Show(r.ToString());
-                }
+                        }                        
+
+                        count1--;
+                        if (count1 == 0)
+                        {
+                            lbGhe.Text = "";
+                        }
+                        else if (count1 == 1)
+                        {
+                            lbGhe.Text = lbGhe.Text.Split(',')[0].ToString();
+                        }
+                        else
+                        {
+
+                            string[] arr = lbGhe.Text.Split(',');
+                            string str = "";
+                            for (int m = 0; m < arr.Length - 1; m++)
+                            {
+                                if (m != arr.Length - 2)
+                                {
+                                    str += arr[m] + ", ";
+                                }
+                                else
+                                {
+                                    str += arr[m];
+                                }
+
+                            }
+                            lbGhe.Text = str;
+                        }
+
+                    }
+                    catch (Exception r)
+                    {
+                        MessageBox.Show(r.ToString());
+                    }                  
 
 
             }
             else
             {
-                t.Image = global::PBL3_DATVEXE.Properties.Resources.image1;
-                count++;
-                lbPrice.Text = Convert.ToString(count * d());
-
-                // kiểm tra xem loại xe nào
-                if (getTypevehicle() == "10 chỗ")
+                // kiểm tra số ghế tối đa 
+                if (count >= 5)
                 {
-                    listNameGhe.Add(t.Name.ToString());
-                }
-                else if (getTypevehicle() == "20 chỗ")
-                {
-                    listNameGhe.Add(t.Name.Split('_')[0].ToString());
+                    MessageBox.Show("Ban chi duoc dat toi da 5 ghe 1 lan");
                 }
                 else
                 {
+                    t.Image = global::PBL3_DATVEXE.Properties.Resources.image1;
+                    count++;
+                    lbPrice.Text = Convert.ToString(count * d());
 
-                }
+                    // kiểm tra xem loại xe nào
+                    if (getTypevehicle() == "10 chỗ")
+                    {
+                        listNameGhe.Add(t.Name.ToString());
+                    }
+                    else if (getTypevehicle() == "20 chỗ")
+                    {
+                        listNameGhe.Add(t.Name.Split('_')[0].ToString());
+                    }
+                    else
+                    {
 
-                count1++;
-                if (count1 == 1)
-                {
-                    lbGhe.Text += t.Name.Split('_')[0].ToString();
-                }
-                else
-                {
-                    lbGhe.Text += ", " + t.Name.Split('_')[0].ToString();
-                }
+                    }
 
-            }
+                    count1++;
+                    if (count1 == 1)
+                    {
+                        lbGhe.Text += t.Name.Split('_')[0].ToString();
+                    }
+                    else
+                    {
+                        lbGhe.Text += ", " + t.Name.Split('_')[0].ToString();
+                    }
+                }
+            }            
         }
 
         public bool algorithmCompareImage(Bitmap bmp1)
@@ -202,7 +210,7 @@ namespace PBL3_DATVEXE.View
             else
             {
                 dv.Show();
-                this.Close();
+                this.Hide();
             }
 
 
@@ -270,7 +278,15 @@ namespace PBL3_DATVEXE.View
             return type;
         }
         private void confirm_Load(object sender, EventArgs e)
-        {    
+        {
+            // kiểm tra xem 
+            count = 0;
+            count1 = 0;
+            for(int i = 0; i < this.listNameGhe.Count ; i++)
+            {
+                this.listNameGhe.RemoveAt(i);
+            }    
+            // kiểm tra xem bấm vào chuyến nào
             if(getTypevehicle() == "10 chỗ")
             {
                 bunifuPanel2.BringToFront();
@@ -336,6 +352,11 @@ namespace PBL3_DATVEXE.View
  
         }
 
-
+        private void but_troveDetailSche_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["DetailSchedule"]; //it should works
+            frm.Show();
+            this.Hide();
+        }
     }
 }

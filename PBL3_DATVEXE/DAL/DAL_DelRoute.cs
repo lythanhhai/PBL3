@@ -94,7 +94,7 @@ namespace PBL3_DATVEXE.DAL
         }
         public DTO_DelRoute getdelroute(DataRow dr)
         {
-
+            
             return new DTO_DelRoute
             {
                 id_delroute = dr["id_detroute"].ToString(),
