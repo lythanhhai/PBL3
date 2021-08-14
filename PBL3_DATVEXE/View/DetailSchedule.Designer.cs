@@ -237,6 +237,7 @@ namespace PBL3_DATVEXE.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DetailSchedule";
             this.Text = "DetailSchedule";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DetailSchedule_FormClosing);
             this.Load += new System.EventHandler(this.DetailSchedule_Load);
             this.gb1.ResumeLayout(false);
             this.pnGioSomNhat.ResumeLayout(false);

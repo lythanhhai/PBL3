@@ -1,4 +1,5 @@
-﻿using PBL3_DATVEXE.BLL;
+﻿using Bunifu.UI.WinForms;
+using PBL3_DATVEXE.BLL;
 using PBL3_DATVEXE.DTO;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace PBL3_DATVEXE.View
 
         // lấy tên ghế từ form confirm sang form datVe.
         public delegate List<string> getNameGhe();
-        private string idoder { get; set; }
+
         public getNameGhe getGhe { get; set; }
         public int soVe { get; set; }
         public double tongGia { get; set; }
@@ -49,9 +50,11 @@ namespace PBL3_DATVEXE.View
         private void But_xacnhan_Click(object sender, EventArgs e)
         {
 
+            
+
             // id_order
             string id_order = Convert.ToString(Convert.ToInt32(BLL_TKVX.Instance.getMaxIdOrder_BLL()) + 1);
-            this.idoder = id_order;
+
             // lấy số vé and tổng giá cho thuộc tính 
             this.id_detRoute = getRoute();// id tuyến
             this.id_vehicle = getVehicle();// id xe
@@ -85,8 +88,8 @@ namespace PBL3_DATVEXE.View
                 }
 
             }
-
-            // có so vé , có tổng giá ,có id_route 
+           
+            // có số vé, có tổng giá, có id_route 
             // cần tìm id_seat dựa vào id_vehicle được lấy từ form detailschedule
             // thêm đơn order theo ghế đã chọn
             if (listOrderSeat.Count > 0)
@@ -102,11 +105,18 @@ namespace PBL3_DATVEXE.View
                 }
                 FormChonPTTT PTTT = new FormChonPTTT(Properties.Settings.Default.id_login, id_person, id_order);
                 PTTT.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("loi");
             }
+            //MessageBox.Show(listGheDaChon.Count.ToString());
+            //MessageBox.Show(listId_seat.Count.ToString());
+            //MessageBox.Show(listOrderSeat.Count.ToString());
+            //MessageBox.Show(this.id_detRoute);
+            //MessageBox.Show(listId_seat[0]);
+            //MessageBox.Show(listGheDaChon[0]);
 
         }
 
@@ -215,6 +225,20 @@ namespace PBL3_DATVEXE.View
             childForm.BringToFront();
             childForm.Show();
             panelMain.Text = childForm.Text;
+        }
+
+        private void but_troveConfirm_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["DetailSchedule"];
+            frm.Show();
+            this.Hide();
+        }
+
+        private void datVe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form frm = Application.OpenForms["DetailSchedule"];
+            frm.Show();
+            this.Hide();
         }
         //public void showNameSeat()
         //{

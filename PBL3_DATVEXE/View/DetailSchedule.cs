@@ -119,53 +119,62 @@ namespace PBL3_DATVEXE.View
         public void showDetailRoute(string departure, string arrival, DateTime date)
         {
             List<Detail> listDetail = BLL_TKVX.Instance.getALLDetailSchedule_BLL(departure, arrival, date.Date);
-            int count = listDetail.Count;
-            seeRoute[] list = new seeRoute[count];
-            int count1 = 0;
-            foreach (seeRoute i in list)
+            foreach(Detail j in listDetail)
             {
-
                 flowLayoutPanel1.Controls.Add(new seeRoute
                 {
-                    id_vehicle = listDetail[count1].id_vehicle,
-                    Id_detRoute = listDetail[count1].id_detRoute,
-                    tenXe = listDetail[count1].name.ToString(),
-                    loaiXe = listDetail[count1].type.ToString(),
-                    diemDi = listDetail[count1].departure.ToString(),
-                    diemDen = listDetail[count1].arrival.ToString(),
-                    thoiGian = listDetail[count1].time_start.ToString(),
-                    gia = listDetail[count1].price.ToString() + "đ",
-                    gheTrong = listDetail[count1].empty_seat.ToString() + " ghế" + " trống"
-                });
-                
-                count1++;
-            }
+                    id_vehicle = j.id_vehicle,
+                    Id_detRoute = j.id_detRoute,
+                    tenXe = j.name.ToString(),
+                    loaiXe = j.type.ToString(),
+                    diemDi = j.departure.ToString(),
+                    diemDen = j.arrival.ToString(),
+                    thoiGian = j.time_start.ToString(),
+                    gia = j.price.ToString() + "đ",
+                    gheTrong = j.empty_seat.ToString() + " ghế" + " trống"
+                }) ;
+            }    
         }
 
         private void showDatailRoute1(List<Detail> listDetail, string departure, string arrival, DateTime date)
 
         {
 
-            seeRoute[] list = new seeRoute[listDetail.Count];
-            int count1 = 0;
+            //seeRoute[] list = new seeRoute[listDetail.Count];
+            //int count1 = 0;
             flowLayoutPanel1.Controls.Clear();
 
-            foreach (seeRoute i in list)
-            {
+            //foreach (seeRoute i in list)
+            //{
 
+            //    flowLayoutPanel1.Controls.Add(new seeRoute
+            //    {
+            //        id_vehicle = listDetail[count1].id_vehicle,
+            //        Id_detRoute = listDetail[count1].id_detRoute,
+            //        tenXe = listDetail[count1].name.ToString(),
+            //        loaiXe = listDetail[count1].type.ToString(),
+            //        diemDi = listDetail[count1].departure.ToString(),
+            //        diemDen = listDetail[count1].arrival.ToString(),
+            //        thoiGian = listDetail[count1].time_start.ToString(),
+            //        gia = listDetail[count1].price.ToString() + "đ",
+            //        gheTrong = listDetail[count1].empty_seat.ToString() + " ghế" + " trống"
+            //    });
+            //    count1++;
+            //}
+            foreach (Detail j in listDetail)
+            {
                 flowLayoutPanel1.Controls.Add(new seeRoute
                 {
-                    id_vehicle = listDetail[count1].id_vehicle,
-                    Id_detRoute = listDetail[count1].id_detRoute,
-                    tenXe = listDetail[count1].name.ToString(),
-                    loaiXe = listDetail[count1].type.ToString(),
-                    diemDi = listDetail[count1].departure.ToString(),
-                    diemDen = listDetail[count1].arrival.ToString(),
-                    thoiGian = listDetail[count1].time_start.ToString(),
-                    gia = listDetail[count1].price.ToString() + "đ",
-                    gheTrong = listDetail[count1].empty_seat.ToString() + " ghế" + " trống"
+                    id_vehicle = j.id_vehicle,
+                    Id_detRoute = j.id_detRoute,
+                    tenXe = j.name.ToString(),
+                    loaiXe = j.type.ToString(),
+                    diemDi = j.departure.ToString(),
+                    diemDen = j.arrival.ToString(),
+                    thoiGian = j.time_start.ToString(),
+                    gia = j.price.ToString() + "đ",
+                    gheTrong = j.empty_seat.ToString() + " ghế" + " trống"
                 });
-                count1++;
             }
         }
 
@@ -287,9 +296,43 @@ namespace PBL3_DATVEXE.View
 
         private void but_trove_Click(object sender, EventArgs e)
         {
+            //Form fm = Application.OpenForms["AffterLogin"];
+            //fm.Show();
+            AffterLogin al = new AffterLogin();
+            al.Show();
+            this.Hide();
+        }
+
+        private void DetailSchedule_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Form fm = Application.OpenForms["AffterLogin"];
+            //fm.Show();
             AffterLogin al = new AffterLogin();
             al.Show();
             this.Hide();
         }
     }
 }
+
+//int count = listDetail.Count;
+//List<seeRoute> listRoute = new List<seeRoute>();
+//seeRoute[] list = new seeRoute[count];
+//int count1 = 0;
+//foreach (seeRoute i in list)
+//{
+
+//    flowLayoutPanel1.Controls.Add(new seeRoute
+//    {
+//        id_vehicle = listDetail[count1].id_vehicle,
+//        Id_detRoute = listDetail[count1].id_detRoute,
+//        tenXe = listDetail[count1].name.ToString(),
+//        loaiXe = listDetail[count1].type.ToString(),
+//        diemDi = listDetail[count1].departure.ToString(),
+//        diemDen = listDetail[count1].arrival.ToString(),
+//        thoiGian = listDetail[count1].time_start.ToString(),
+//        gia = listDetail[count1].price.ToString() + "đ",
+//        gheTrong = listDetail[count1].empty_seat.ToString() + " ghế" + " trống"
+//    });
+
+//    count1++;
+//}

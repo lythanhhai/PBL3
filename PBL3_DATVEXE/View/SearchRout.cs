@@ -119,7 +119,7 @@ namespace PBL3_DATVEXE.View
             DetailSchedule ds = new DetailSchedule(comboBox1.Text,comboBox2.Text,Convert.ToDateTime(bunifuDatePicker1.Value.ToString()).Date);
             ds.Show();
 
-            ((Form)this.TopLevelControl).Close();
+            ((Form)this.TopLevelControl).Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

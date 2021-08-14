@@ -49,9 +49,10 @@ namespace PBL3_DATVEXE.View
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::PBL3_DATVEXE.Properties.Resources.placeholder__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(141, 113);
+            this.pictureBox3.Location = new System.Drawing.Point(41, 151);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
@@ -61,9 +62,10 @@ namespace PBL3_DATVEXE.View
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PBL3_DATVEXE.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(660, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(630, 149);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(36, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -87,10 +89,11 @@ namespace PBL3_DATVEXE.View
             this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(660, 162);
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(672, 183);
+            this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
-            this.bunifuDatePicker1.Size = new System.Drawing.Size(289, 38);
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(325, 44);
             this.bunifuDatePicker1.TabIndex = 19;
             this.bunifuDatePicker1.Value = new System.DateTime(2021, 6, 1, 15, 49, 0, 0);
             this.bunifuDatePicker1.Visible = false;
@@ -101,9 +104,10 @@ namespace PBL3_DATVEXE.View
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::PBL3_DATVEXE.Properties.Resources.exchange;
-            this.pictureBox2.Location = new System.Drawing.Point(369, 114);
+            this.pictureBox2.Location = new System.Drawing.Point(297, 150);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(43, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -115,9 +119,10 @@ namespace PBL3_DATVEXE.View
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::PBL3_DATVEXE.Properties.Resources.placeholder__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(429, 113);
+            this.pictureBox4.Location = new System.Drawing.Point(372, 149);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 42);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
@@ -128,10 +133,10 @@ namespace PBL3_DATVEXE.View
             this.but_timChuyen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.but_timChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_timChuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.but_timChuyen.Location = new System.Drawing.Point(457, 314);
+            this.but_timChuyen.Location = new System.Drawing.Point(415, 383);
             this.but_timChuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_timChuyen.Name = "but_timChuyen";
-            this.but_timChuyen.Size = new System.Drawing.Size(172, 42);
+            this.but_timChuyen.Size = new System.Drawing.Size(194, 52);
             this.but_timChuyen.TabIndex = 22;
             this.but_timChuyen.Text = "Tìm Chuyến";
             this.but_timChuyen.UseVisualStyleBackColor = false;
@@ -140,31 +145,34 @@ namespace PBL3_DATVEXE.View
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 121);
+            this.comboBox1.Location = new System.Drawing.Point(87, 151);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 24);
+            this.comboBox1.Size = new System.Drawing.Size(190, 28);
             this.comboBox1.TabIndex = 23;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(473, 123);
+            this.comboBox2.Location = new System.Drawing.Point(418, 149);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(170, 24);
+            this.comboBox2.Size = new System.Drawing.Size(191, 28);
             this.comboBox2.TabIndex = 24;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // textBoxDay
             // 
-            this.textBoxDay.Location = new System.Drawing.Point(698, 121);
+            this.textBoxDay.Location = new System.Drawing.Point(672, 149);
+            this.textBoxDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxDay.Name = "textBoxDay";
-            this.textBoxDay.Size = new System.Drawing.Size(229, 22);
+            this.textBoxDay.Size = new System.Drawing.Size(257, 26);
             this.textBoxDay.TabIndex = 26;
             // 
             // SearchRout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PBL3_DATVEXE.Properties.Resources.background2;
@@ -178,8 +186,9 @@ namespace PBL3_DATVEXE.View
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuDatePicker1);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SearchRout";
-            this.Size = new System.Drawing.Size(949, 564);
+            this.Size = new System.Drawing.Size(1036, 705);
             this.Click += new System.EventHandler(this.SearchRout_Click);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuTextBox1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

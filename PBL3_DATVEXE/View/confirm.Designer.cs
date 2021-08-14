@@ -53,6 +53,7 @@ namespace PBL3_DATVEXE.View
             this.Seat10 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Seat2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.but_troveDetailschedule = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbGhe = new Bunifu.UI.WinForms.BunifuLabel();
             this.But_tiep = new System.Windows.Forms.Button();
-            this.but_troveDetailschedule = new System.Windows.Forms.Button();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGroupBox1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -696,6 +696,18 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(918, 553);
             this.bunifuPanel3.TabIndex = 18;
+            // 
+            // but_troveDetailschedule
+            // 
+            this.but_troveDetailschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
+            this.but_troveDetailschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_troveDetailschedule.Location = new System.Drawing.Point(3, 6);
+            this.but_troveDetailschedule.Name = "but_troveDetailschedule";
+            this.but_troveDetailschedule.Size = new System.Drawing.Size(147, 52);
+            this.but_troveDetailschedule.TabIndex = 33;
+            this.but_troveDetailschedule.Text = "Trở về";
+            this.but_troveDetailschedule.UseVisualStyleBackColor = false;
+            this.but_troveDetailschedule.Click += new System.EventHandler(this.but_troveDetailSche_Click);
             // 
             // label5
             // 
@@ -1644,18 +1656,6 @@ namespace PBL3_DATVEXE.View
             this.But_tiep.UseVisualStyleBackColor = false;
             this.But_tiep.Click += new System.EventHandler(this.But_tiep_Click);
             // 
-            // but_troveDetailschedule
-            // 
-            this.but_troveDetailschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
-            this.but_troveDetailschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_troveDetailschedule.Location = new System.Drawing.Point(3, 6);
-            this.but_troveDetailschedule.Name = "but_troveDetailschedule";
-            this.but_troveDetailschedule.Size = new System.Drawing.Size(147, 52);
-            this.but_troveDetailschedule.TabIndex = 33;
-            this.but_troveDetailschedule.Text = "Trở về";
-            this.but_troveDetailschedule.UseVisualStyleBackColor = false;
-            this.but_troveDetailschedule.Click += new System.EventHandler(this.but_troveDetailSche_Click);
-            // 
             // confirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1671,6 +1671,7 @@ namespace PBL3_DATVEXE.View
             this.Controls.Add(this.bunifuPanel2);
             this.Name = "confirm";
             this.Text = "confirm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.confirm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.confirm_FormClosed);
             this.Load += new System.EventHandler(this.confirm_Load);
             this.bunifuPanel2.ResumeLayout(false);

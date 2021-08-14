@@ -75,6 +75,8 @@ namespace PBL3_DATVEXE.View
             timer1.Enabled = false;
             MessageBox.Show("Giao dịch đã hủy. Cảm ơn quý khách!");
             this.Close();
+            AffterLogin al = new AffterLogin();
+            al.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace PBL3_DATVEXE.View
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.but_troveConfirm = new System.Windows.Forms.Button();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -154,7 +155,7 @@ namespace PBL3_DATVEXE.View
             // 
             this.But_xacnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
             this.But_xacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_xacnhan.Location = new System.Drawing.Point(202, 536);
+            this.But_xacnhan.Location = new System.Drawing.Point(343, 537);
             this.But_xacnhan.Name = "But_xacnhan";
             this.But_xacnhan.Size = new System.Drawing.Size(147, 52);
             this.But_xacnhan.TabIndex = 8;
@@ -228,6 +229,7 @@ namespace PBL3_DATVEXE.View
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
+            this.panelMain.Controls.Add(this.but_troveConfirm);
             this.panelMain.Controls.Add(this.bunifuPictureBox1);
             this.panelMain.Controls.Add(this.bunifuPanel4);
             this.panelMain.Controls.Add(this.bunifuPanel3);
@@ -247,6 +249,18 @@ namespace PBL3_DATVEXE.View
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(595, 642);
             this.panelMain.TabIndex = 14;
+            // 
+            // but_troveConfirm
+            // 
+            this.but_troveConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(174)))), ((int)(((byte)(208)))));
+            this.but_troveConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_troveConfirm.Location = new System.Drawing.Point(89, 537);
+            this.but_troveConfirm.Name = "but_troveConfirm";
+            this.but_troveConfirm.Size = new System.Drawing.Size(147, 52);
+            this.but_troveConfirm.TabIndex = 14;
+            this.but_troveConfirm.Text = "Trở về";
+            this.but_troveConfirm.UseVisualStyleBackColor = false;
+            this.but_troveConfirm.Click += new System.EventHandler(this.but_troveConfirm_Click);
             // 
             // bunifuPictureBox1
             // 
@@ -273,6 +287,7 @@ namespace PBL3_DATVEXE.View
             this.Controls.Add(this.panelMain);
             this.Name = "datVe";
             this.Text = "datVe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.datVe_FormClosing);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
@@ -298,5 +313,6 @@ namespace PBL3_DATVEXE.View
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelMain;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private System.Windows.Forms.Button but_troveConfirm;
     }
 }

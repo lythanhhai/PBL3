@@ -36,8 +36,8 @@ namespace PBL3_DATVEXE.View
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.veCuaToi = new System.Windows.Forms.Button();
-            this.searchRout1 = new PBL3_DATVEXE.View.SearchRout();
             this.but_dangxuat = new System.Windows.Forms.Button();
+            this.searchRout1 = new PBL3_DATVEXE.View.SearchRout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,25 +84,11 @@ namespace PBL3_DATVEXE.View
             this.veCuaToi.Location = new System.Drawing.Point(0, 320);
             this.veCuaToi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.veCuaToi.Name = "veCuaToi";
-            this.veCuaToi.Size = new System.Drawing.Size(255, 74);
+            this.veCuaToi.Size = new System.Drawing.Size(249, 74);
             this.veCuaToi.TabIndex = 8;
             this.veCuaToi.Text = "Vé của tôi";
             this.veCuaToi.UseVisualStyleBackColor = false;
             this.veCuaToi.Click += new System.EventHandler(this.veCuaToi_Click);
-            // 
-            // searchRout1
-            // 
-            this.searchRout1.arrival = null;
-            this.searchRout1.BackColor = System.Drawing.Color.White;
-            this.searchRout1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchRout1.BackgroundImage")));
-            this.searchRout1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchRout1.date = new System.DateTime(((long)(0)));
-            this.searchRout1.Location = new System.Drawing.Point(254, 0);
-            this.searchRout1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.searchRout1.Name = "searchRout1";
-            this.searchRout1.Size = new System.Drawing.Size(1264, 761);
-            this.searchRout1.TabIndex = 7;
-            this.searchRout1.Load += new System.EventHandler(this.searchRout1_Load);
             // 
             // but_dangxuat
             // 
@@ -111,27 +97,41 @@ namespace PBL3_DATVEXE.View
             this.but_dangxuat.Location = new System.Drawing.Point(0, 427);
             this.but_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.but_dangxuat.Name = "but_dangxuat";
-            this.but_dangxuat.Size = new System.Drawing.Size(255, 74);
+            this.but_dangxuat.Size = new System.Drawing.Size(249, 74);
             this.but_dangxuat.TabIndex = 9;
             this.but_dangxuat.Text = "Đăng xuất";
             this.but_dangxuat.UseVisualStyleBackColor = false;
             this.but_dangxuat.Click += new System.EventHandler(this.but_dangxuat_Click);
+            // 
+            // searchRout1
+            // 
+            this.searchRout1.arrival = null;
+            this.searchRout1.BackColor = System.Drawing.Color.White;
+            this.searchRout1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchRout1.BackgroundImage")));
+            this.searchRout1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchRout1.date = new System.DateTime(((long)(0)));
+            this.searchRout1.Location = new System.Drawing.Point(255, 0);
+            this.searchRout1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchRout1.Name = "searchRout1";
+            this.searchRout1.Size = new System.Drawing.Size(1101, 705);
+            this.searchRout1.TabIndex = 10;
             // 
             // AffterLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1516, 752);
+            this.ClientSize = new System.Drawing.Size(1356, 706);
+            this.Controls.Add(this.searchRout1);
             this.Controls.Add(this.but_dangxuat);
             this.Controls.Add(this.veCuaToi);
-            this.Controls.Add(this.searchRout1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AffterLogin";
             this.Text = "AfterLogin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AffterLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -146,8 +146,8 @@ namespace PBL3_DATVEXE.View
         private buttonSearch buttonSearch1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer1;
-        private SearchRout searchRout1;
         private System.Windows.Forms.Button veCuaToi;
         private System.Windows.Forms.Button but_dangxuat;
+        private SearchRout searchRout1;
     }
 }

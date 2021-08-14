@@ -108,9 +108,20 @@ namespace PBL3_DATVEXE.View
         }
 
         private void but_dangxuat_Click(object sender, EventArgs e)
-        {
-            Register rg = new Register();
+        {   
             this.Hide();
+            //Form fm = Application.OpenForms["Register"];
+            //fm.Show();
+            Register rg = new Register();
+            rg.Show();
+        }
+
+        private void AffterLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            //Form fm = Application.OpenForms["Register"];
+            //fm.Show();
+            Register rg = new Register();
             rg.Show();
         }
     }

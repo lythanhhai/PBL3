@@ -132,6 +132,7 @@ namespace PBL3_DATVEXE.View
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormChonPTTT";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChonPTTT_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

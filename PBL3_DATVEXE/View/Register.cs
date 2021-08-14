@@ -16,6 +16,7 @@ namespace PBL3_DATVEXE.View
     {
         public Register()
         {
+            
             InitializeComponent();
             // sự kiện txtUser
             //lbUser.ForeColor = Color.FromArgb(40, 100, 108);
@@ -312,36 +313,25 @@ namespace PBL3_DATVEXE.View
 
         private void Register_Load(object sender, EventArgs e)
         {
-            //String[] myArr = new String[] { "A", "B", "C" };
-            //Properties.Settings.Default.PassWord.AddRange(myArr);
-
-            //string[] str = new string[Properties.Settings.Default.PassWord.Count];
-            //Properties.Settings.Default.PassWord.CopyTo(str, 0);
-            //for (int i = 0; i < str.Length ; i++)
+            //this.Controls.Clear();
+            //this.Controls.OfType<TextBox>().ToList().ForEach(t => t.Text = "");
+            //foreach(Control i in Controls)
             //{
-            //    MessageBox.Show("1");
-            //}    
-            //List<Person> list = BLL_TKVX.Instance.getALlKhach_BLL();
-            //foreach(Person i in list)
-            //{
-            //    if(i.address == "QT")
+            //    if(i is TextBox)
             //    {
-            //        MessageBox.Show(i.name);
+            //        i.Text = "";
             //    }    
-            //}
+            //}    
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-            //for (int i = 0; i < Properties.Settings.Default.UserName.Count; i++)
-            //{
-            //    if (Properties.Settings.Default.UserName[i] == txtUser.Text)
-            //    {
-            //        txtUser.Text = Properties.Settings.Default.UserName[i];
-                  //  txtPass.Text = Properties.Settings.Default.PassWord[0];
-              //  }
-           // }
-            //MessageBox.Show("ngu");
+            
+        }
+
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

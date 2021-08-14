@@ -228,7 +228,7 @@ namespace PBL3_DATVEXE.View
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(615, 606);
+            this.tabPage2.Size = new System.Drawing.Size(615, 603);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@ namespace PBL3_DATVEXE.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(609, 600);
+            this.panel1.Size = new System.Drawing.Size(609, 597);
             this.panel1.TabIndex = 0;
             // 
             // lbErrorDontTick
@@ -501,7 +501,7 @@ namespace PBL3_DATVEXE.View
             this.bpbSignUp.BorderRadius = 87;
             this.bpbSignUp.Image = global::PBL3_DATVEXE.Properties.Resources.signUp;
             this.bpbSignUp.IsCircle = true;
-            this.bpbSignUp.Location = new System.Drawing.Point(229, 441);
+            this.bpbSignUp.Location = new System.Drawing.Point(229, 439);
             this.bpbSignUp.Name = "bpbSignUp";
             this.bpbSignUp.Size = new System.Drawing.Size(174, 174);
             this.bpbSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -758,6 +758,7 @@ namespace PBL3_DATVEXE.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Register";
             this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.Load += new System.EventHandler(this.Register_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();

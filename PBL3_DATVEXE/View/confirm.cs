@@ -15,6 +15,7 @@ namespace PBL3_DATVEXE.View
 {
     public partial class confirm : Form
     {
+        //đếm số ghế đang chọn
         private static int count = 0;
         // khai báo delegate để chuyển đổi dữ liệu từ form detailschedule sang confirm
         public delegate double getGia();
@@ -24,7 +25,9 @@ namespace PBL3_DATVEXE.View
         public delegate string getIdRoute_Vehicle();
         public getIdRoute_Vehicle d2 { get; set; }
         public getIdRoute_Vehicle d3 { get; set; }
+        // đếm số ghế
         private static int count1 = 0;
+
 
         public confirm()
         {
@@ -354,9 +357,16 @@ namespace PBL3_DATVEXE.View
 
         private void but_troveDetailSche_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms["DetailSchedule"]; //it should works
-            frm.Show();
             this.Hide();
+            Form frm = Application.OpenForms["DetailSchedule"];
+            frm.Show();
+        }
+
+        private void confirm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            Form frm = Application.OpenForms["DetailSchedule"];
+            frm.Show();
         }
     }
 }

@@ -41,18 +41,28 @@ namespace PBL3_DATVEXE.View
             {
                 Payment pm = new Payment(id_login,id_person,id_order,"0889287686", "Mời bạn gửi tiền vào TK dưới đây bằng MoMo");
                 pm.Show();
+                this.Hide();
             }
             else
             {
 
                 Payment pm = new Payment(id_login, id_person, id_order, "4005205315400", "Mời bạn gửi tiền vào TK, ngân hàng Agribank");
                 pm.Show();
+                this.Hide();
             }
                
 
         }
 
         private void but_trove_Click(object sender, EventArgs e)
+        {
+            BLL_Payment.Instance.DeletePayment(this.id_order, this.id_person);
+            this.Hide();
+            Form frm = Application.OpenForms["datVe"];
+            frm.Show();
+        }
+
+        private void FormChonPTTT_FormClosing(object sender, FormClosingEventArgs e)
         {
             BLL_Payment.Instance.DeletePayment(this.id_order, this.id_person);
             this.Hide();
