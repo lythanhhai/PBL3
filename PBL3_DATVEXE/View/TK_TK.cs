@@ -86,6 +86,10 @@ namespace PBL3_DATVEXE.View
         {
 
             bunifuDataGridView1.DataSource = BLL_QLVX.Instance.getQLVXBY("", "", "");
+            bunifuLabel3.Text = BLL_QLVX.Instance.tt("","",DateTime.MinValue , DateTime.MaxValue, "").ToString();
+            bunifuLabel4.Text = BLL_QLVX.Instance.tp("", "", DateTime.MinValue, DateTime.MaxValue, "").ToString();
+
+            
         }
         public void Show1(string route, string vehicle, string date_route)
         {

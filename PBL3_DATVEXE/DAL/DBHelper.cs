@@ -19,7 +19,7 @@ namespace PBL3_DATVEXE.DAL
             {
                 if(_Instance == null)
                 {
-                    string cnnstr = @"Data Source=103.95.197.121,9696;Initial Catalog=MVH_07;User ID=DACNPM;Password=khoa19@itf";
+                    string cnnstr = @"Data Source=103.95.197.121,9696;Initial Catalog=MVH_07_DEMO;User ID=DACNPM;Password=khoa19@itf";
                     _Instance = new DBHelper(cnnstr);
                 }
                 return _Instance;

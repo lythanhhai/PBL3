@@ -62,14 +62,14 @@ namespace PBL3_DATVEXE.DAL
         public void addvehicle_DAL(DTO_vehicle r)
         {
             string query = "insert into Vehicle values ('";
-            query += r.id_vehicle + "', '" + r.type + "', '" + r.name + "', '"+ r.number_seat+"','"
+            query += r.id_vehicle + "', N'" + r.type + "', '" + r.name + "', '"+ r.number_seat+"','"
                 + false + "');";
             DB_H.Instance.Ex(query);
 
         }
         public void updatevehiclebyid_vehicle(DTO_vehicle s)
         {
-            string querry = "update Vehicle set id_vehicle = '" + s.id_vehicle + "', type = '" + s.type
+            string querry = "update Vehicle set id_vehicle = '" + s.id_vehicle + "', type = N'" + s.type
                 + "', name = '" + s.name + "', status_vehicle = '" + false + "', number_seat = '" + s.number_seat
                 + "' where id_vehicle = '" + s.id_vehicle + "'";
             DB_H.Instance.Ex(querry);

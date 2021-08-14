@@ -26,7 +26,7 @@ namespace PBL3_DATVEXE.DAL
        
         public List<Payment> Getpayment()
         {
-            string sql ="select * from [MVH_07].[dbo].[info_person]";
+            string sql ="select * from [MVH_07_DEMO].[dbo].[info_person]";
             List<Payment> l = new List<Payment>();
             
             foreach(DataRow i in DB_H.Instance.get(sql).Rows)
